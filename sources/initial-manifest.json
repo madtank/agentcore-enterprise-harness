@@ -1,0 +1,29 @@
+[
+  {
+    "file": "agentcore-overview.html",
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html",
+    "http_status": 200,
+    "bytes": 31048,
+    "sha256": "090ceb1b61bea0df4293b85e388b0f412d392060f4edf8c8ddcce13aa52ae3d0",
+    "retrieved_at": "2026-10-02T04:42:21.684163+00:00"
+  },
+  {
+    "file": "agentcore-toc.json",
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/toc-contents.json",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/toc-contents.json",
+    "http_status": 200,
+    "bytes": 49796,
+    "sha256": "dcabeb263bfbeffbb6aaeacb373dafe9908078a946dde95c83145a59556b1f3e",
+    "retrieved_at": "2026-10-02T04:42:21.749359+00:00"
+  },
+  {
+    "file": "agentcore-developer-guide.pdf",
+    "url": "https://docs.aws.amazon.com/pdfs/bedrock-agentcore/latest/devguide/bedrock-agentcore-dg.pdf",
+    "resolved_url": "https://docs.aws.amazon.com/pdfs/bedrock-agentcore/latest/devguide/bedrock-agentcore-dg.pdf",
+    "http_status": 200,
+    "bytes": 31422956,
+    "sha256": "0654d768b5bf7901b2873a101a74e1fac7d555f8e04ac818ae3153b4f4766572",
+    "retrieved_at": "2026-10-02T04:42:21.994578+00:00"
+  }
+]

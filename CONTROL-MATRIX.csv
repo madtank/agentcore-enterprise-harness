@@ -1,0 +1,26 @@
+control_id,scope,requirement,enforcement_point,current_status,acceptance_evidence,sources
+C01,Caller input,Reject harness configuration/identity overrides,Application request builder,Implemented locally; live application pending,Override negative tests pass,S08/S23
+C02,Session ownership,Bind session to verified user and profile,Application store,Local trusted-label binding implemented; SSO pending,Cross-user/profile tests; authenticated resume tests,S08
+C03,Service ingress,Require IAM or JWT; restrict direct bypass,IAM/JWT authorizers,Template/design only,Unauthorized caller and override bypass denied,S08/S12
+C04,Model selection,Approve specific model/provider/Region,Profile + IAM + network,Template/design only,Different model/endpoint cannot be used,S08
+C05,Tool surface,Exact tool selectors; exclude shell and command APIs,Harness allowlist + IAM,Local profile checked; deployment pending,Forbidden tool/command execution denied,S05
+C06,Tool authorization,Default deny; policy mode ENFORCE,Gateway Policy,Template/design only,Allow/deny suite against generated schema,S17
+C07,Backend access,Enforce data and operation permissions,Tool backend,Not implemented,Cross-user/unauthorized resource tests,S08/S20
+C08,Knowledge ACLs,Inject trusted userContext; maintain source ACLs,Retrieval adapter/interceptor/source,Not implemented,User cannot select another ACL identity,S20
+C09,Revocation,Invalidate cached passages and affected history,Application/retrieval/session controls,Design only,Removed permission cannot expose prior cached data,S08/S20
+C10,Content safety,"Check prompts, tool content and final outputs",Guardrails + application boundaries,Design only; non-sensitive demo scope,Adversarial/PII evaluation suite,S22
+C11,Hook failures,Synchronous deny-on-failure validation,Harness Lambda hooks,SDK-valid templates only,Timeout/error/truncation deny tests,S04
+C12,Approval,Verify authority and exact payload with expiry,Application approval ledger,Deferred; business writes disabled,Modified/replayed/expired approvals denied,S04/S26
+C13,Write integrity,Idempotency and durable action receipts,Deterministic business executor,Deferred,Concurrent duplicate requests commit once,S26
+C14,Credentials,Scope and rotate; OAuth delegation when needed,AgentCore Identity + backend,Design only,Token/scope/user isolation tests,S08
+C15,Skills,Reviewed immutable artifacts and digests,CI + S3/image + profile lock,Sample skills supplied; publishing pending,Mutation and unreviewed skill override denied,S09/S29
+C16,Registry,Separate publisher and curator; approved revision,Registry IAM + curation,Design/example snapshot only,Self-approval denied; approved discovery works,S12/S15
+C17,Registry metadata,Approval plus metadata compliance,Release resolver,Schema supplied; resolver pending,NON_COMPLIANT resource not promoted,S16
+C18,Discovery revocation,Block execution independently of catalog visibility,Gateway/backend/application emergency deny,Design only,Cached endpoint revoked without search delay,S15/S18
+C19,Limits,Iteration/time/output controls and budget ledger,Harness + Gateway rate limits + application,Local bounds implemented; AWS pending,Limit outcomes and quotas tested live,S07/S23/S24
+C20,Audit,Retain real actor/action/decision/receipt,Application + CloudTrail,Design only,Required audit data events and receipts available,S07/S14
+C21,Observability,Enable transaction search; control trace data,CloudWatch/X-Ray + application,Design only,Trace correlation and retention inspection,S07
+C22,Promotion,Pinned named endpoint and complete release lock,CI/CD + harness versioning,Template/design only,Regression gates and rollback drill,S21
+C23,Network,Private connectivity and controlled egress,VPC/PrivateLink/endpoints,Deferred to production requirements,Disallowed destination cannot be reached,S27
+C24,Residency,Review all inference routing including discovery,Architecture + model/provider configuration,Design only,Documented region-processing decision,S28
+C25,Recovery,"Stop, revoke, rollback and restore",Operations runbooks,Design only,Recorded recovery drill,S21/S27

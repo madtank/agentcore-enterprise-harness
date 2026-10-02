@@ -1,0 +1,18 @@
+[
+  "01-features/01-harness/00-getting-started/",
+  "01-features/01-harness/01-advanced-examples/02-gateway-integration/",
+  "01-features/01-harness/01-advanced-examples/03-execution-limits/",
+  "01-features/01-harness/01-advanced-examples/05-agent-skills/",
+  "01-features/01-harness/01-advanced-examples/07-oauth/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/01-registry-end-to-end/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/01-gateway/01-attach-targets/mcp/connectors/managed-kb/",
+  "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/",
+  "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/",
+  "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/",
+  "01-features/01-harness/utils/"
+]

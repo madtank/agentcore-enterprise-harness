@@ -1,0 +1,2440 @@
+{
+  "sha": "4cd43c71c642ce2428a39c6b025a73b686c74f8f",
+  "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/trees/4cd43c71c642ce2428a39c6b025a73b686c74f8f",
+  "tree": [
+    {
+      "path": "01-features/01-harness/00-getting-started/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaa0746f7cd0a2ed1e348fb2b099a99a2d07db66",
+      "size": 5990,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/aaa0746f7cd0a2ed1e348fb2b099a99a2d07db66"
+    },
+    {
+      "path": "01-features/01-harness/00-getting-started/getting_started.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fe8719d0486339664ce9b4a03bdf14f85aa8fca",
+      "size": 8215,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3fe8719d0486339664ce9b4a03bdf14f85aa8fca"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/02-gateway-integration/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29dc5ec82d547d7625d11bc1a174be0b34b1b0b1",
+      "size": 9103,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/29dc5ec82d547d7625d11bc1a174be0b34b1b0b1"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/02-gateway-integration/gateway_integration.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "06f077698c531dfcf77bd2f3d2fd41961c1cf24d",
+      "size": 16360,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/06f077698c531dfcf77bd2f3d2fd41961c1cf24d"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/03-execution-limits/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "607c460719674c9c6441b425262360940621688f",
+      "size": 4717,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/607c460719674c9c6441b425262360940621688f"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/03-execution-limits/execution_limits.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b19140f2681869c5784b407bc6f975fbbdd239b9",
+      "size": 10007,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b19140f2681869c5784b407bc6f975fbbdd239b9"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/05-agent-skills/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "feb859f3885c701698ceb6b96ee53f4329833428",
+      "size": 7799,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/feb859f3885c701698ceb6b96ee53f4329833428"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/05-agent-skills/agent_skills.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "931aba010bed1633b628588550f7c631f9fdc164",
+      "size": 16450,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/931aba010bed1633b628588550f7c631f9fdc164"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/07-oauth/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "636f875addf7b9dd6f1e48659a5e3f0e8eeb42ee",
+      "size": 9377,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/636f875addf7b9dd6f1e48659a5e3f0e8eeb42ee"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/07-oauth/oauth_gateway.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "232018b35c42e84add10f885d81ecb1ac48949bf",
+      "size": 14911,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/232018b35c42e84add10f885d81ecb1ac48949bf"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/07-oauth/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e1d82ac6c749ffdcd527229ef7ad261676aa1422",
+      "size": 63,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e1d82ac6c749ffdcd527229ef7ad261676aa1422"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/07-oauth/utils/lambda_function_code.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ce773e2669b06bd0aca698f9982c963cbe40ba13",
+      "size": 2971,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ce773e2669b06bd0aca698f9982c963cbe40ba13"
+    },
+    {
+      "path": "01-features/01-harness/01-advanced-examples/07-oauth/utils/setup_helpers.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "646ac844dc273f8067d3cb7deb829634984a2c80",
+      "size": 41112,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/646ac844dc273f8067d3cb7deb829634984a2c80"
+    },
+    {
+      "path": "01-features/01-harness/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cacd0dba5a3898943c2cdf0887b4925bd74c8ee0",
+      "size": 49,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cacd0dba5a3898943c2cdf0887b4925bd74c8ee0"
+    },
+    {
+      "path": "01-features/01-harness/utils/client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "60d615eae3aba1dbc8632352b76a0cc9835e0142",
+      "size": 2388,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/60d615eae3aba1dbc8632352b76a0cc9835e0142"
+    },
+    {
+      "path": "01-features/01-harness/utils/harness.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd258c102ae10c6c607fd55905b7c19c67d05b96",
+      "size": 2283,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cd258c102ae10c6c607fd55905b7c19c67d05b96"
+    },
+    {
+      "path": "01-features/01-harness/utils/iam.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63b582f4f26ad12e19a566f704f0837cf4dc24e1",
+      "size": 8499,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/63b582f4f26ad12e19a566f704f0837cf4dc24e1"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/.github/workflows/agentcore-eval.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8ec4a52d350fc08124dd392abf29311bcb7dab6",
+      "size": 14220,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c8ec4a52d350fc08124dd392abf29311bcb7dab6"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bc679999bd3f49026a4006d775745d6f2ccbecb",
+      "size": 155,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3bc679999bd3f49026a4006d775745d6f2ccbecb"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a0b220079506d6ca299f5a2f3092911352e92a1",
+      "size": 18790,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6a0b220079506d6ca299f5a2f3092911352e92a1"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/agent/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2bb5e41323b13d04c166c895a84b41e369e7026f",
+      "size": 1233,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2bb5e41323b13d04c166c895a84b41e369e7026f"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/agent/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd71d06885926cb54be519b819866691cc76c51a",
+      "size": 2285,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cd71d06885926cb54be519b819866691cc76c51a"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/agent/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ccb73c41d5d093f1bac72a5ea765caa3f2565d4",
+      "size": 362,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2ccb73c41d5d093f1bac72a5ea765caa3f2565d4"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/agent/src/assistant_agent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c9670ca651d43c9e0fa5fd91db8597cb29e632f",
+      "size": 9861,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9c9670ca651d43c9e0fa5fd91db8597cb29e632f"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/app.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69a2659a2caa0261d0d18374771aafbae07f33ee",
+      "size": 490,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/69a2659a2caa0261d0d18374771aafbae07f33ee"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/cdk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4baa10225b81473dadc903671b35570b028427c",
+      "size": 30,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b4baa10225b81473dadc903671b35570b028427c"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/fixtures/sample_traces.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f7d014b9703e267dc214fd7b864d1a21213ba1a",
+      "size": 35957,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4f7d014b9703e267dc214fd7b864d1a21213ba1a"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/infrastructure/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ce4dc983738bc51061dcd8d00e2ae878bc3ffa6",
+      "size": 108,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/1ce4dc983738bc51061dcd8d00e2ae878bc3ffa6"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/infrastructure/pre_token_lambda/index.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "566c318fa8217c5f61639fd16aa9af6d2b1f99f3",
+      "size": 877,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/566c318fa8217c5f61639fd16aa9af6d2b1f99f3"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/infrastructure/roles.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74dc5f63261f36b57ac22dce9786d6140582ce86",
+      "size": 12343,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/74dc5f63261f36b57ac22dce9786d6140582ce86"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/infrastructure/stack.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7181f2f4f576d0b8539be07cbe1966aa76618676",
+      "size": 25252,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7181f2f4f576d0b8539be07cbe1966aa76618676"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a174da712e50d4f4a1a80d9033edc316649932b",
+      "size": 1133,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/1a174da712e50d4f4a1a80d9033edc316649932b"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "beeff40835df11614db8940306ea6f8d5330705e",
+      "size": 3145,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/beeff40835df11614db8940306ea6f8d5330705e"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8462e0f870364f707346b695d98496dd4edf0115",
+      "size": 678,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/8462e0f870364f707346b695d98496dd4edf0115"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/server.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f79c09ba835c7de6c4c5136e395f57f1becc682",
+      "size": 3259,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/1f79c09ba835c7de6c4c5136e395f57f1becc682"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/src/auth/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b198695d673359f41f6298318fed70fc9ceb903f",
+      "size": 207,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b198695d673359f41f6298318fed70fc9ceb903f"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/src/auth/middleware.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9488a2ad91fa113d03cf1d259d862071d2cb2f3",
+      "size": 4212,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c9488a2ad91fa113d03cf1d259d862071d2cb2f3"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/src/auth/models.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17949132ba7ed277544b78dcce2bc6bcc9324fe7",
+      "size": 505,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/17949132ba7ed277544b78dcce2bc6bcc9324fe7"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/src/auth/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bb9c213e0a32ff3cc4c0e5bb78c833401b16273",
+      "size": 5303,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3bb9c213e0a32ff3cc4c0e5bb78c833401b16273"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/mcp-server/src/exceptions.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b7f65956b5e14c70bbc7ebec2bb7f53617d3de6",
+      "size": 193,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7b7f65956b5e14c70bbc7ebec2bb7f53617d3de6"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbd50dc1a19119b493593c07ae922ffb0d2c07de",
+      "size": 502,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cbd50dc1a19119b493593c07ae922ffb0d2c07de"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/ruff.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fac2de7b9b9e8ee5679e7aee1892688c43de2caf",
+      "size": 333,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fac2de7b9b9e8ee5679e7aee1892688c43de2caf"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/scripts/agentcore_eval.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90169517e63d77dd7d5ed18a5add116b08512943",
+      "size": 8787,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/90169517e63d77dd7d5ed18a5add116b08512943"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/scripts/deploy_and_test_rbac.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "96517085485b6702c16e34a7fa6d45d26596e9b5",
+      "size": 10001,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/96517085485b6702c16e34a7fa6d45d26596e9b5"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/scripts/eval_dataset.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9212b280063ed32ee1cd30e7d39636ca2922b221",
+      "size": 208,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9212b280063ed32ee1cd30e7d39636ca2922b221"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/scripts/evaluate_stored_traces.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2b18ea3805cad53412e812923b2f7240f85d4a3",
+      "size": 3331,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d2b18ea3805cad53412e812923b2f7240f85d4a3"
+    },
+    {
+      "path": "01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/scripts/evaluation_pipeline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f32cfd863328ff272045dd047ae3846462a7bb00",
+      "size": 9246,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f32cfd863328ff272045dd047ae3846462a7bb00"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/01-gateway/01-attach-targets/mcp/connectors/managed-kb/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f75695e94baf84aebf1407b24d293c1350a2d581",
+      "size": 813,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f75695e94baf84aebf1407b24d293c1350a2d581"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aeadf99b9c94276c211d662e575dfb121b8a6c11",
+      "size": 24655,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/aeadf99b9c94276c211d662e575dfb121b8a6c11"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/cleanup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "340ade430294e46de8a4930fc8cb921058d96a14",
+      "size": 364,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/340ade430294e46de8a4930fc8cb921058d96a14"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/deploy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c98d3112f3c5c994e59653dc6037f1dd627d840",
+      "size": 400,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7c98d3112f3c5c994e59653dc6037f1dd627d840"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/policy_demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ea055860a1416786acb02c9514bb155d4265597",
+      "size": 436,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3ea055860a1416786acb02c9514bb155d4265597"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71999dda549fd0d91e10e156938f7bcdcd996a7a",
+      "size": 425,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/71999dda549fd0d91e10e156938f7bcdcd996a7a"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63255aee16efac4e2c52a109749f855a251e18f3",
+      "size": 439,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/63255aee16efac4e2c52a109749f855a251e18f3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/utils/agent_with_tools.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f9b6a642bf1eaea31796d8be118846a173bd618",
+      "size": 5253,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0f9b6a642bf1eaea31796d8be118846a173bd618"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/utils/application_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b688067d7e723fb73f8d51b6785cbc77107f748c",
+      "size": 2264,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b688067d7e723fb73f8d51b6785cbc77107f748c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/utils/approval_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85f1d15e6ccc6169f5bdfc5e24e1eea8137956e5",
+      "size": 2232,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/85f1d15e6ccc6169f5bdfc5e24e1eea8137956e5"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/utils/risk_model_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98332353d9ba040a834f3e2ea257dd74d0fb741e",
+      "size": 2425,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/98332353d9ba040a834f3e2ea257dd74d0fb741e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "773cfc2c77f2edf7ed9f23e6143b538ec31280cd",
+      "size": 463078,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/773cfc2c77f2edf7ed9f23e6143b538ec31280cd"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6092a0687f4445ec8b2ea4e62cc0f3bc42a1122",
+      "size": 126,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c6092a0687f4445ec8b2ea4e62cc0f3bc42a1122"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bf44963f0a7d7a53b4c168c75dc6428fee5706f4",
+      "size": 10321,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/bf44963f0a7d7a53b4c168c75dc6428fee5706f4"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/cleanup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fdad81eed62378a42fb26c14f591e1ad049a4dd",
+      "size": 6518,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5fdad81eed62378a42fb26c14f591e1ad049a4dd"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/deploy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f719a6254ebc4d670fe6ca62f0c94bc21cec53a",
+      "size": 26220,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5f719a6254ebc4d670fe6ca62f0c94bc21cec53a"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/guardrail_demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e915546c669e07446941872b95a4c9f505179115",
+      "size": 11612,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e915546c669e07446941872b95a4c9f505179115"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0206c4d2f3e945d00a0b0143e8fd2910c52d081d",
+      "size": 207,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0206c4d2f3e945d00a0b0143e8fd2910c52d081d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/utils/agent_with_tools.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69afbdc53a045dec3cf0c4cc79777b403644b6dc",
+      "size": 5658,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/69afbdc53a045dec3cf0c4cc79777b403644b6dc"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/utils/application_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c9d8d6d4065705e64aae6bac4fe5f33073354ba",
+      "size": 1355,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0c9d8d6d4065705e64aae6bac4fe5f33073354ba"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/utils/approval_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0627e9c93ee4120b370a77b605742f42b89180f0",
+      "size": 972,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0627e9c93ee4120b370a77b605742f42b89180f0"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/utils/risk_model_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89917b2c71579bc4b63820f7e460e1d6eb5d172c",
+      "size": 1142,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/89917b2c71579bc4b63820f7e460e1d6eb5d172c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7e7043c220da1e953a9c84adb8ffe5aab20371c",
+      "size": 24788,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a7e7043c220da1e953a9c84adb8ffe5aab20371c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/cleanup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "beb4188f5e5625124cc4114d25d687892986ab55",
+      "size": 8222,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/beb4188f5e5625124cc4114d25d687892986ab55"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/deploy.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b1df62d9be56fb68e1f2c6da3918337028c25ede",
+      "size": 26881,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b1df62d9be56fb68e1f2c6da3918337028c25ede"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/policy_demo.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9936207045a23d0a3d92dd9ed31871c11a262599",
+      "size": 35257,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9936207045a23d0a3d92dd9ed31871c11a262599"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69dde57d9f354faf64f261e0ac5cd8e6255d674b",
+      "size": 418,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/69dde57d9f354faf64f261e0ac5cd8e6255d674b"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63255aee16efac4e2c52a109749f855a251e18f3",
+      "size": 439,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/63255aee16efac4e2c52a109749f855a251e18f3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/utils/agent_with_tools.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fe983d58f8881500ae8a878c94d4f7c13596207",
+      "size": 5253,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6fe983d58f8881500ae8a878c94d4f7c13596207"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/utils/application_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b688067d7e723fb73f8d51b6785cbc77107f748c",
+      "size": 2264,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b688067d7e723fb73f8d51b6785cbc77107f748c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/utils/approval_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85f1d15e6ccc6169f5bdfc5e24e1eea8137956e5",
+      "size": 2232,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/85f1d15e6ccc6169f5bdfc5e24e1eea8137956e5"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/utils/risk_model_tool.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "98332353d9ba040a834f3e2ea257dd74d0fb741e",
+      "size": 2425,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/98332353d9ba040a834f3e2ea257dd74d0fb741e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/uv.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df415d89ad598802cc4c0adfa1bc2d07c141302a",
+      "size": 463066,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/df415d89ad598802cc4c0adfa1bc2d07c141302a"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/01-registry-end-to-end/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4ec5ee3d1d611e1ca9b617d0f76182031c12839",
+      "size": 6722,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c4ec5ee3d1d611e1ca9b617d0f76182031c12839"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/01-registry-end-to-end/getting_started_registry_end_to_end.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4425bd59d398e9cba9d43b1a4498b11973688df3",
+      "size": 21136,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4425bd59d398e9cba9d43b1a4498b11973688df3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/IAM_PERMISSIONS.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "383f712c53d040aea2781644fb93850057cb6fcc",
+      "size": 8985,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/383f712c53d040aea2781644fb93850057cb6fcc"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e35e01df52bb90172fe7f6ee2e3c070f8931bcc8",
+      "size": 8694,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e35e01df52bb90172fe7f6ee2e3c070f8931bcc8"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/admin_approval_workflow.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "203679ec20ce92241e284879578779753b3ee991",
+      "size": 13341,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/203679ec20ce92241e284879578779753b3ee991"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/cfn_eventbridge.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2505ddb77c56d41949b31d7f057177deeaffe51a",
+      "size": 23607,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2505ddb77c56d41949b31d7f057177deeaffe51a"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/deploy.sh",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "65581e8cf172b51793a5ba85ecd57b5dab5e3f6f",
+      "size": 6479,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/65581e8cf172b51793a5ba85ecd57b5dab5e3f6f"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/destroy.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "219c783068e9fa6a07232a22e4c0417ce5142f45",
+      "size": 1824,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/219c783068e9fa6a07232a22e4c0417ce5142f45"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30ddf823b87c17f4bc8ab389649385f682173e38",
+      "size": 6,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/30ddf823b87c17f4bc8ab389649385f682173e38"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44cc0c0dff606e3bccfd7c590a9bbda1eafa8fce",
+      "size": 1475,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/44cc0c0dff606e3bccfd7c590a9bbda1eafa8fce"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "34f6171c39e503c7871a51be1a4cc8f93c3557c8",
+      "size": 936,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/34f6171c39e503c7871a51be1a4cc8f93c3557c8"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d1af5badef082878831d7a065586cd3306b1046e",
+      "size": 11861,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d1af5badef082878831d7a065586cd3306b1046e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/a2a_requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7506c18ff4e410a9a1407ee8946ef8b993265d1",
+      "size": 36,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f7506c18ff4e410a9a1407ee8946ef8b993265d1"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/cleanup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45c89cd7dc308aee5c5b2f6d30421e5f65f1f89c",
+      "size": 7416,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/45c89cd7dc308aee5c5b2f6d30421e5f65f1f89c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/customer_support_agent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9204bc8af3f31b2f4c88fa62bcb0a0fd0de5ea16",
+      "size": 1713,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9204bc8af3f31b2f4c88fa62bcb0a0fd0de5ea16"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/discovery_and_invocation_at_runtime.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f56dc0d727bfde52dd163689b54dfaa8c057d294",
+      "size": 26761,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f56dc0d727bfde52dd163689b54dfaa8c057d294"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/orchestrator_agent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f40a96868d88cddc316a323f49f00060252d7af5",
+      "size": 4637,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f40a96868d88cddc316a323f49f00060252d7af5"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/orchestrator_requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4b966df9c06b1b19c6980637d21a4249df26d199",
+      "size": 49,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4b966df9c06b1b19c6980637d21a4249df26d199"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/pricing_agent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5b61072484d09f9be89b7765be90916054b09d",
+      "size": 1563,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ca5b61072484d09f9be89b7765be90916054b09d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/utils.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e47791f543d253af2265f9f57d33171035d23b",
+      "size": 17207,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/76e47791f543d253af2265f9f57d33171035d23b"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d1f7a579dee21ed7baa324eab20bb6223404a91",
+      "size": 5498,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7d1f7a579dee21ed7baa324eab20bb6223404a91"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/registry_skills_dynamic_discovery.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e452b1837a3db52777d6f177b615802c7088bb0d",
+      "size": 11661,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e452b1837a3db52777d6f177b615802c7088bb0d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "800b8b986346879d2f380baeaf08651940658e81",
+      "size": 87,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/800b8b986346879d2f380baeaf08651940658e81"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skill_registry/pdf_SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e046a5ae107a6cb23cfb16c219837094ab35d3",
+      "size": 8072,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d3e046a5ae107a6cb23cfb16c219837094ab35d3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/LICENSE.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c55ab42224874608473643de0a85736b7fec0730",
+      "size": 1467,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c55ab42224874608473643de0a85736b7fec0730"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/SKILL.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d3e046a5ae107a6cb23cfb16c219837094ab35d3",
+      "size": 8072,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d3e046a5ae107a6cb23cfb16c219837094ab35d3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/forms.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e7e1e0d9e6ae17215db3e130aea3c3c546487e6",
+      "size": 11854,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6e7e1e0d9e6ae17215db3e130aea3c3c546487e6"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/reference.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "41400bf4fc67f15fb062d43695ec92f078226023",
+      "size": 16692,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/41400bf4fc67f15fb062d43695ec92f078226023"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/check_bounding_boxes.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2687a4beec6722e8a65e257507c8422d60ada77",
+      "size": 2859,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e2687a4beec6722e8a65e257507c8422d60ada77"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/check_fillable_fields.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29e199909cd7885310d1c1c0677fc785fa5810bd",
+      "size": 264,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/29e199909cd7885310d1c1c0677fc785fa5810bd"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/convert_pdf_to_images.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dadfd7a38fb5cfd21d4749e88b4452d7ae0b1c4e",
+      "size": 1002,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/dadfd7a38fb5cfd21d4749e88b4452d7ae0b1c4e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/create_validation_image.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ce68ed1c03fae8aa7397c11884998427e709778",
+      "size": 1262,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/8ce68ed1c03fae8aa7397c11884998427e709778"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/extract_form_field_info.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb9a42bb3a9e37d496907dd62142b5d209acf903",
+      "size": 4433,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cb9a42bb3a9e37d496907dd62142b5d209acf903"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/extract_form_structure.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "551357aecf6d3fc5ee0906535ec623186c534bc1",
+      "size": 4257,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/551357aecf6d3fc5ee0906535ec623186c534bc1"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/fill_fillable_fields.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a90bea45f20e1070e0ff1075600a5b4a6e077ef",
+      "size": 3899,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5a90bea45f20e1070e0ff1075600a5b4a6e077ef"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d236c77b37561ac703b1cc840529e4d8f9e9a03",
+      "size": 3158,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7d236c77b37561ac703b1cc840529e4d8f9e9a03"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/utils/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/utils/python_exec_tool.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c70db61c7739bbbc6fe9dc3e34317c2794b3dd2",
+      "size": 2718,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9c70db61c7739bbbc6fe9dc3e34317c2794b3dd2"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/utils/skill_loader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9988adc71b58bb0387152f1ee81d0f5e29afab4c",
+      "size": 7094,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9988adc71b58bb0387152f1ee81d0f5e29afab4c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/.gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fdd5b56767531142637a3bd83f64c329d57b506",
+      "size": 221,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5fdd5b56767531142637a3bd83f64c329d57b506"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81cee3f5fe9e33c654be40038d6a67252f8e7989",
+      "size": 1730,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/81cee3f5fe9e33c654be40038d6a67252f8e7989"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/.gitkeep",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "size": 0,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2f7f984b5d3d99b87a2abb22fea9f2d2975a2d29",
+      "size": 16392,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2f7f984b5d3d99b87a2abb22fea9f2d2975a2d29"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/bin/cdk-app.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0d589e5b98d063df614350eea03b235d6837229",
+      "size": 3407,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f0d589e5b98d063df614350eea03b235d6837229"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/cdk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "75817316b50bed324f450465b31c12150b9d2d2c",
+      "size": 265,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/75817316b50bed324f450465b31c12150b9d2d2c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/cli/commands.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "70515ce4d249f5c5133703919674a4a6b1466b26",
+      "size": 50837,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/70515ce4d249f5c5133703919674a4a6b1466b26"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/cli/context.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b36f2357c4159b4616476b209b102a9c29927e85",
+      "size": 13570,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b36f2357c4159b4616476b209b102a9c29927e85"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/cli/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730c97e431c370b6b10f851786c75ccebf81f2ae",
+      "size": 22335,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/730c97e431c370b6b10f851786c75ccebf81f2ae"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/config/migration.customer-managed-role.example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "182aa672085b44072d88c633f75c611bad00f588",
+      "size": 1816,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/182aa672085b44072d88c633f75c611bad00f588"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/config/migration.example.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25112073aef142e80813ae9d1e42889c9b03f5e1",
+      "size": 638,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/25112073aef142e80813ae9d1e42889c9b03f5e1"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/docs/configuration.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d6e9c843c219f1d72c261c04813f4d631bc8244",
+      "size": 9121,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7d6e9c843c219f1d72c261c04813f4d631bc8244"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/docs/detaileddoc.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5bd2d39f3b29753c4d221d06979ff45d56040109",
+      "size": 38485,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5bd2d39f3b29753c4d221d06979ff45d56040109"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/docs/development.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e051b0ced887f8a7f531baded3d4825e11a78c92",
+      "size": 11994,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e051b0ced887f8a7f531baded3d4825e11a78c92"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/docs/iam.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5185170fc75d2fd5ee1ce7ce18adba7ce06b540",
+      "size": 16661,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a5185170fc75d2fd5ee1ce7ce18adba7ce06b540"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/build_wheel.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "43d5a3fe1968914d29b2cf74e1f96c11cf6924ba",
+      "size": 5288,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/43d5a3fe1968914d29b2cf74e1f96c11cf6924ba"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b73a8d5695d50ff6790c8b22d751ec5f2e66a357",
+      "size": 244,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b73a8d5695d50ff6790c8b22d751ec5f2e66a357"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/__main__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0b9de955740f603ac91b176c7b799a4ab87d13e",
+      "size": 41021,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c0b9de955740f603ac91b176c7b799a4ab87d13e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/adapter/api-adapter.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe66a4dce2dbc45cbdee2528237ac865ddd8e6e2",
+      "size": 1810,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fe66a4dce2dbc45cbdee2528237ac865ddd8e6e2"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/adapter_defaults.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7e6860c9f5a5f08975f5a303de07fef249fd4b3",
+      "size": 6792,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f7e6860c9f5a5f08975f5a303de07fef249fd4b3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/aws_auth.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc075ddbf79ccad5ba06a6d1209b430ec066f9e4",
+      "size": 5045,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/bc075ddbf79ccad5ba06a6d1209b430ec066f9e4"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/jobs/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dfb25952cc136585b9010876272e88e735a5f669",
+      "size": 431,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/dfb25952cc136585b9010876272e88e735a5f669"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/jobs/extract.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4ea60fa2b58ebbda11da373bf105f01dd603f67b",
+      "size": 24029,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4ea60fa2b58ebbda11da373bf105f01dd603f67b"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/jobs/transform_load.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a23fc86ac7c351c68f0f29cc5d994001593c2caf",
+      "size": 67477,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a23fc86ac7c351c68f0f29cc5d994001593c2caf"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/local_store.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ea086dab6afc17d1e2890d5b5b71a22520ac8d5c",
+      "size": 8951,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ea086dab6afc17d1e2890d5b5b71a22520ac8d5c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/preflight.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fa62e321df6f7c8f6280efb9a9cfd8c7908898f",
+      "size": 22182,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5fa62e321df6f7c8f6280efb9a9cfd8c7908898f"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/registry_api.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "915d910fcb82502d925ee8fcadfaa8b741cb38e4",
+      "size": 89622,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/915d910fcb82502d925ee8fcadfaa8b741cb38e4"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/registry_client.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77ad1c22f2efc043d5593cb88b8af7c3000cc537",
+      "size": 1759,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/77ad1c22f2efc043d5593cb88b8af7c3000cc537"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/report_html.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4eef8f883e0b2870fd8aea14d60648a0d6becde3",
+      "size": 40262,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4eef8f883e0b2870fd8aea14d60648a0d6becde3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/settings.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cc7012fde1bfb1330c8880b5a43d4a17a43658a",
+      "size": 39857,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/1cc7012fde1bfb1330c8880b5a43d4a17a43658a"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/storage.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "061176f0137e4f71e796a70472feb2d94a355a52",
+      "size": 15129,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/061176f0137e4f71e796a70472feb2d94a355a52"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/stores.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9697980466f5a21908a3166c9a1d6e2b389d502",
+      "size": 2352,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c9697980466f5a21908a3166c9a1d6e2b389d502"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/target_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2038f9ffbe64cc628ec2dfa0eae8edf012803e9e",
+      "size": 12220,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2038f9ffbe64cc628ec2dfa0eae8edf012803e9e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/teardown.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "865acf15f8664806d36272ca639ca0332cd2331d",
+      "size": 13638,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/865acf15f8664806d36272ca639ca0332cd2331d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/transform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "574cbdb695803ac6b152db964f495bd6ff0b1fba",
+      "size": 49184,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/574cbdb695803ac6b152db964f495bd6ff0b1fba"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/util.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c2e4beca5bf806af1c799ef56b41ca9055aa8a7",
+      "size": 7774,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3c2e4beca5bf806af1c799ef56b41ca9055aa8a7"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/migration_common/watermark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cb6cbedb31f59fba822f013214a88e7f932882e",
+      "size": 10755,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4cb6cbedb31f59fba822f013214a88e7f932882e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/pyproject.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b511f665a69cd04572eccfc412dfea9de560f457",
+      "size": 304,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b511f665a69cd04572eccfc412dfea9de560f457"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_crosswalk.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c810a0835c5cfd1a4512b06c81bf81e1786d972d",
+      "size": 4488,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c810a0835c5cfd1a4512b06c81bf81e1786d972d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_engine_entrypoint.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ac3ea1b8afbb8c2b8cf9c47a9458d044312fc77",
+      "size": 23508,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7ac3ea1b8afbb8c2b8cf9c47a9458d044312fc77"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_jobs_end_to_end.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72e904aaf47932501f2d75758bb7fd7f999051ba",
+      "size": 58973,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/72e904aaf47932501f2d75758bb7fd7f999051ba"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_load_concurrency.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa22d9647feb6c1de173fb6f27f707f279a1c311",
+      "size": 6699,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/aa22d9647feb6c1de173fb6f27f707f279a1c311"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_load_guards.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f93d161d42d37a1874a41a52c893d4aedfe22f4",
+      "size": 22340,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7f93d161d42d37a1874a41a52c893d4aedfe22f4"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_local_run.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "249dc6ac17528fa50c12f3b1785da5c8d250c6d6",
+      "size": 12626,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/249dc6ac17528fa50c12f3b1785da5c8d250c6d6"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_local_store.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "23417adb95af0f8ada9d516347352661c86e0c3d",
+      "size": 8442,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/23417adb95af0f8ada9d516347352661c86e0c3d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_preflight.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "137bc224d2d76c5248db60fcb601cf986ce86f80",
+      "size": 19966,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/137bc224d2d76c5248db60fcb601cf986ce86f80"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_registry_clients.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d72a43bdc01fb3bda98d9b8a58a19ef386dc8a3b",
+      "size": 59370,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d72a43bdc01fb3bda98d9b8a58a19ef386dc8a3b"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_report_dumps.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9816e723f078a299e436620856741c175264f8c",
+      "size": 10286,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b9816e723f078a299e436620856741c175264f8c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_report_html.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cbce9fbe1315fcff94acc8b49c9ff92fcd2f8a3",
+      "size": 18255,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7cbce9fbe1315fcff94acc8b49c9ff92fcd2f8a3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_settings.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffff131ae97e2fba7745ec62024a63f07973ad7e",
+      "size": 36549,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ffff131ae97e2fba7745ec62024a63f07973ad7e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_source_index.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9e48d81724f9f37b3b3b0f867e55330dcf91ee85",
+      "size": 31551,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9e48d81724f9f37b3b3b0f867e55330dcf91ee85"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_staged_reader.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b9f3b05bb798ceb50e33c0870e3a5087ea317351",
+      "size": 6747,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b9f3b05bb798ceb50e33c0870e3a5087ea317351"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_target_registry.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73e73a79b113e9de98f3ad13e8c8663d798cc268",
+      "size": 19409,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/73e73a79b113e9de98f3ad13e8c8663d798cc268"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_teardown.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c92e537387f69808d8e3bc91c864f742b22ff8a",
+      "size": 10125,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3c92e537387f69808d8e3bc91c864f742b22ff8a"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_transform.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a9a246ba0e541b04f3bc429d8b641c91ec960f9",
+      "size": 23350,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5a9a246ba0e541b04f3bc429d8b641c91ec960f9"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/common/tests/test_watermark.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba641956f807731b941073edf80f69c4f493bfde",
+      "size": 18609,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ba641956f807731b941073edf80f69c4f493bfde"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/extract.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "3821134485faec7ec58402cb77debe86685826a0",
+      "size": 1315,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3821134485faec7ec58402cb77debe86685826a0"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/glue/transform_load.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "39c6e85356d15b209809dcfad9cafb19e0e338c0",
+      "size": 1380,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/39c6e85356d15b209809dcfad9cafb19e0e338c0"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/lib/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49c8f1213a1977f6391c0831a1d6f2480aba7f6e",
+      "size": 35952,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/49c8f1213a1977f6391c0831a1d6f2480aba7f6e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/lib/glue-python-library.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55a73db25133ae366eebafe72109938ddffaf3f4",
+      "size": 3267,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/55a73db25133ae366eebafe72109938ddffaf3f4"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/lib/migration-engine-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3eec5e6e8bbc756d88f9640e23bf890d820d6bd3",
+      "size": 42943,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3eec5e6e8bbc756d88f9640e23bf890d820d6bd3"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/lib/registry-access-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "590bd5f17e0930912ed48b03917f86a3dfa75d7c",
+      "size": 3442,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/590bd5f17e0930912ed48b03917f86a3dfa75d7c"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "74011162eb0e6236b9116cffc5381286ee98a066",
+      "size": 9881,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/74011162eb0e6236b9116cffc5381286ee98a066"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21af4267b7a07e8c4094a2aff2d11389b6036e37",
+      "size": 2047,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/21af4267b7a07e8c4094a2aff2d11389b6036e37"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/requirements-dev.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa8dfea180c396bc6004d098912d72a11b972ee",
+      "size": 952,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ffa8dfea180c396bc6004d098912d72a11b972ee"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/ruff.toml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c23bc62b25ea43bbd002985a741d399ff06e4416",
+      "size": 1305,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c23bc62b25ea43bbd002985a741d399ff06e4416"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tools/benchmark_load_concurrency.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "0f296a7499ce5dd8101b35911c1b862f454b4f0e",
+      "size": 5209,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0f296a7499ce5dd8101b35911c1b862f454b4f0e"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tools/seed_live_parity_fixture.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "ed9e328ca1400c6a58dad0ca7d6e6275adba77b1",
+      "size": 12382,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ed9e328ca1400c6a58dad0ca7d6e6275adba77b1"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tools/seed_preview_test_registry.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "4b6608f184728dabb5d3e9c138d87e351fdae98d",
+      "size": 55155,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4b6608f184728dabb5d3e9c138d87e351fdae98d"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tools/verify_cli_modes.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6d83a18f98de1d5df97c009fdf22469f69376d9",
+      "size": 23290,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e6d83a18f98de1d5df97c009fdf22469f69376d9"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tools/verify_replay_fingerprint.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "6140072ef2287db74e70d8cc419f11c36a598427",
+      "size": 10554,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6140072ef2287db74e70d8cc419f11c36a598427"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tools/verify_wheel.py",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "bde2eaf37fc104d0c521fda8c2f7daa94d9a4c19",
+      "size": 4374,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/bde2eaf37fc104d0c521fda8c2f7daa94d9a4c19"
+    },
+    {
+      "path": "01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f66d2c56b2ae6cd839b0b1ecf5b3023060aa2be",
+      "size": 674,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9f66d2c56b2ae6cd839b0b1ecf5b3023060aa2be"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "696babf65122072f28afaae82a1d4050d3aea5b9",
+      "size": 1741,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/696babf65122072f28afaae82a1d4050d3aea5b9"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/.npmrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3e7c7204be7ead2553ba4359fbc2eb40049e8dd8",
+      "size": 73,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3e7c7204be7ead2553ba4359fbc2eb40049e8dd8"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/.nvmrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0df78c88db1169d7cb958e49d60ba0e77327c1f5",
+      "size": 6,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0df78c88db1169d7cb958e49d60ba0e77327c1f5"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/.prettierignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "acea1674d6fd2b97b0caf1c40261292f02f9ed4c",
+      "size": 465,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/acea1674d6fd2b97b0caf1c40261292f02f9ed4c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/.prettierrc.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86708580343f448ee23e81383bfabd7d517a10e1",
+      "size": 591,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/86708580343f448ee23e81383bfabd7d517a10e1"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/.tool-versions",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b83c60cde789e3553eaf41797a24fff877061c0",
+      "size": 13,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3b83c60cde789e3553eaf41797a24fff877061c0"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d10bbc2d47a67a60a30cfd2d3b95bd367fbc9617",
+      "size": 10284,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d10bbc2d47a67a60a30cfd2d3b95bd367fbc9617"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cf34d6d0ae0a649a27f3214477d893b477d24a5",
+      "size": 11968,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6cf34d6d0ae0a649a27f3214477d893b477d24a5"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/API_USAGE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88acc3775575e258fb89936ec1e899b4b05fd0e2",
+      "size": 5358,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/88acc3775575e258fb89936ec1e899b4b05fd0e2"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/ARCHITECTURE.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "303076a13cdb758975a5f4e4bb0f668d46de46be",
+      "size": 12974,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/303076a13cdb758975a5f4e4bb0f668d46de46be"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/DEPLOYMENT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d738f6c12815586735d9f7ed0436ecff5a793866",
+      "size": 6387,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d738f6c12815586735d9f7ed0436ecff5a793866"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/GUIDANCE_PUBLICATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d1285da71f10b183672180098305ccf5eeac1ca",
+      "size": 13370,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9d1285da71f10b183672180098305ccf5eeac1ca"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/MODEL_CONFIGURATION.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c83b87b8c09fa5b11e51e03936d00344f69501a6",
+      "size": 5320,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c83b87b8c09fa5b11e51e03936d00344f69501a6"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50ceb89633afdf5f4e97fca71df73cbb15655e98",
+      "size": 6671,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/50ceb89633afdf5f4e97fca71df73cbb15655e98"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/TROUBLESHOOTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "89a75b6d1c76b44a2208fdcb448c75ed7e0585fd",
+      "size": 14265,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/89a75b6d1c76b44a2208fdcb448c75ed7e0585fd"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/knowledge-base-examples/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "33ab5f782d41f2e12a4c622d92f6b154f9490a8b",
+      "size": 2824,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/33ab5f782d41f2e12a4c622d92f6b154f9490a8b"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/knowledge-base-examples/bedrock-agentcore-guide.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ab8eca2c680e43c93bfc0397725ee5df2607984",
+      "size": 4525,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7ab8eca2c680e43c93bfc0397725ee5df2607984"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/knowledge-base-examples/getting-started.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff7e6fd7ad7a0dec5ddf8fb91adeaa98813a16ec",
+      "size": 3363,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ff7e6fd7ad7a0dec5ddf8fb91adeaa98813a16ec"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/docs/knowledge-base-examples/test-kb-document.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a448b26d1a99d73688e059a2748c3abf597986ff",
+      "size": 1898,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a448b26d1a99d73688e059a2748c3abf597986ff"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/eslint.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aaa343025af5823a76c5fb6589b5815cafd57fe9",
+      "size": 6599,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/aaa343025af5823a76c5fb6589b5815cafd57fe9"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0a48a82d45830a963a42c0885ca354edaaca2081",
+      "size": 910,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0a48a82d45830a963a42c0885ca354edaaca2081"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/.gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d65c764c72bbe1fdddf756f6ebc6fee2b91c0039",
+      "size": 459,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d65c764c72bbe1fdddf756f6ebc6fee2b91c0039"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb53fb9b0ba1d01aa4c8f8e32c9eccdcff995c00",
+      "size": 1699,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cb53fb9b0ba1d01aa4c8f8e32c9eccdcff995c00"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/Dockerfile",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b39b174c06f95188d315b0f4aa77199f40692dee",
+      "size": 1142,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b39b174c06f95188d315b0f4aa77199f40692dee"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e40d9763647d084b65fa33fc7984bb2b6930723b",
+      "size": 252,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e40d9763647d084b65fa33fc7984bb2b6930723b"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/src/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32e8fbb2954db2b74b072c28bea2b2c7aaca4575",
+      "size": 35,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/32e8fbb2954db2b74b072c28bea2b2c7aaca4575"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/src/agent.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc690aa0a49ee602957a32a71b246570e1bf9df2",
+      "size": 2071,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cc690aa0a49ee602957a32a71b246570e1bf9df2"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/src/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ad05e83d344abd01be88823d73af3088706a859",
+      "size": 5048,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/8ad05e83d344abd01be88823d73af3088706a859"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/src/memory.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e598f1037f77a97c85dd8d4965f7c9fea7492551",
+      "size": 5088,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e598f1037f77a97c85dd8d4965f7c9fea7492551"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/src/tools/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44e1ae3e73de0a1c843cbd05103af12fcc037051",
+      "size": 110,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/44e1ae3e73de0a1c843cbd05103af12fcc037051"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/agent/src/tools/knowledge_base.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcfdbb38f6bd62f5f9c96c824f696b026e25607c",
+      "size": 3799,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fcfdbb38f6bd62f5f9c96c824f696b026e25607c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/bin/app.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a017684cd04d4b7b362d3ac8aa08865c05232a",
+      "size": 7933,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d9a017684cd04d4b7b362d3ac8aa08865c05232a"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/cdk.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d049c166707dbfef3bda3bd98b7ba1bbcbc9a090",
+      "size": 1374,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d049c166707dbfef3bda3bd98b7ba1bbcbc9a090"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/jest.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3456d9e8d6ccd1ae5e6a9d675b3ecc24d6cef46",
+      "size": 1002,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e3456d9e8d6ccd1ae5e6a9d675b3ecc24d6cef46"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/constructs/api-proxy-construct.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50c11115ed66ad6db1cb554841f16714ee0da361",
+      "size": 7598,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/50c11115ed66ad6db1cb554841f16714ee0da361"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/constructs/bedrock-knowledge-base-permissions.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6385480c78adccc77956cc83ad6169280adba6af",
+      "size": 7379,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6385480c78adccc77956cc83ad6169280adba6af"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/constructs/cors-cloudfront-config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "edbb115b643d973c07952e7588c47e762a6b4937",
+      "size": 6434,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/edbb115b643d973c07952e7588c47e762a6b4937"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/constructs/lambda-function.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e83a3088721a5a2d50965f45479cfc4b4887b180",
+      "size": 1169,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e83a3088721a5a2d50965f45479cfc4b4887b180"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/constructs/lambda-layer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd0b17fd11f5356b3ddfa0c71844ea1700fc0d18",
+      "size": 856,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fd0b17fd11f5356b3ddfa0c71844ea1700fc0d18"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/constructs/origin-request-function.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ab13c729abed911f396b81c97976ea86a4589db",
+      "size": 3079,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/8ab13c729abed911f396b81c97976ea86a4589db"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/agentcore-memory-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aff31f0429a0ac2d66ea61a5e6077c850a3dabb4",
+      "size": 2522,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/aff31f0429a0ac2d66ea61a5e6077c850a3dabb4"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/agentcore-runtime-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be1a1def4ed9b1264e3d1a0cf50d8078ef9c7d36",
+      "size": 6952,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/be1a1def4ed9b1264e3d1a0cf50d8078ef9c7d36"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/api-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bbe70f7c074cea7b2b886e2b57bbb92f9b6947a6",
+      "size": 16513,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/bbe70f7c074cea7b2b886e2b57bbb92f9b6947a6"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/cognito-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "935bb01a0fdd967c766800e8ca28b5f063153321",
+      "size": 14168,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/935bb01a0fdd967c766800e8ca28b5f063153321"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/compute-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c1e226e9210646378b4190810259f15a54b11a0",
+      "size": 4356,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/0c1e226e9210646378b4190810259f15a54b11a0"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/database-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f379613e56c8b5db1f4011813a7cc2d1f9611c2",
+      "size": 3145,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/1f379613e56c8b5db1f4011813a7cc2d1f9611c2"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/monitoring-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69924427167c64493db57c469e499ec9c390f3b2",
+      "size": 7757,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/69924427167c64493db57c469e499ec9c390f3b2"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/network-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fc615e5b510713d54be69d483783dc149d1b05c",
+      "size": 4567,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5fc615e5b510713d54be69d483783dc149d1b05c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/opensearch-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f1a5a5b49c953814e0fa6d795038b3846a532500",
+      "size": 20244,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/f1a5a5b49c953814e0fa6d795038b3846a532500"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/shared-resources-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0e9cb198c3ae71d614d764ada34335f48d393c3",
+      "size": 5751,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b0e9cb198c3ae71d614d764ada34335f48d393c3"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/storage-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cc59cb039dfb3a6b9f586facf8c62417cade2b40",
+      "size": 3980,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/cc59cb039dfb3a6b9f586facf8c62417cade2b40"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/stacks/web-console-stack.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5821af8faad929985be474377e24e1db68336e40",
+      "size": 5354,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/5821af8faad929985be474377e24e1db68336e40"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/utils/nag-suppressions.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa2b105bdd4404e626baffb0c7341fa06654d7fa",
+      "size": 8866,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fa2b105bdd4404e626baffb0c7341fa06654d7fa"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a340209510bf97317684e61f612339a3b6742b3b",
+      "size": 1957,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a340209510bf97317684e61f612339a3b6742b3b"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/chat/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e264ee63fa4afe50ee93d0e32006e3e2c8b6fd34",
+      "size": 15152,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e264ee63fa4afe50ee93d0e32006e3e2c8b6fd34"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/chat/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f57860a72b03c04bb7cd3045c0df54bd7c77465",
+      "size": 69088,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6f57860a72b03c04bb7cd3045c0df54bd7c77465"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/chat/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "157bf0a193d0fe085d04db39f52101d6a3208f18",
+      "size": 571,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/157bf0a193d0fe085d04db39f52101d6a3208f18"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/chat/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b8e659dcaf98da910b35215f98c56480fc210980",
+      "size": 388,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b8e659dcaf98da910b35215f98c56480fc210980"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/create-initial-user/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "762a489f960ba58310ec156cd891bab3154aa7f1",
+      "size": 3409,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/762a489f960ba58310ec156cd891bab3154aa7f1"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/create-initial-user/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32b22ea3268543c811b792d8adb5846eaaa6715c",
+      "size": 232,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/32b22ea3268543c811b792d8adb5846eaaa6715c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/layers/common/nodejs/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3b8d25751d9acf450212f93fa42dfc5292088c2f",
+      "size": 117804,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3b8d25751d9acf450212f93fa42dfc5292088c2f"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/layers/common/nodejs/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "762f1fb513cff0a3b02a997033be393f224646cc",
+      "size": 815,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/762f1fb513cff0a3b02a997033be393f224646cc"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7cd7735972e8e1b3b1a16f371400a3c1d0a91d65",
+      "size": 196686,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7cd7735972e8e1b3b1a16f371400a3c1d0a91d65"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c083383f4a3daacbcaaf497022ea43e100637266",
+      "size": 559,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c083383f4a3daacbcaaf497022ea43e100637266"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c9b0e16898a0fb879f497db49027c376fb1fd2a",
+      "size": 470,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2c9b0e16898a0fb879f497db49027c376fb1fd2a"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/types.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64d1082aa02e0af28dffed733187e8f24981d8ed",
+      "size": 415,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/64d1082aa02e0af28dffed733187e8f24981d8ed"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/vector-index/index.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ac5546ac8a354dd433ad357fecd6e17d89acb71",
+      "size": 10410,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/3ac5546ac8a354dd433ad357fecd6e17d89acb71"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/vector-index/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7736092ab36a760ebc97db87c543596394e77428",
+      "size": 87266,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7736092ab36a760ebc97db87c543596394e77428"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/src/functions/vector-index/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e12b970c3988a16e1d1ad1a51f88e489e15d34b5",
+      "size": 373,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e12b970c3988a16e1d1ad1a51f88e489e15d34b5"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/test/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4288fc6372607343d9e889c612ee10d664e514cc",
+      "size": 4522,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4288fc6372607343d9e889c612ee10d664e514cc"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/test/setup.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b208de30782939b390e7ff50a90abb25946d3f3c",
+      "size": 850,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b208de30782939b390e7ff50a90abb25946d3f3c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/test/stacks/api-stack.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "99f87481a6f2aa7c4308ca885fc6e2c87ba06798",
+      "size": 744,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/99f87481a6f2aa7c4308ca885fc6e2c87ba06798"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/test/unit/functions/chat.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "812aaa7cf7813e4f9229f3976ef281aec8a151cf",
+      "size": 3741,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/812aaa7cf7813e4f9229f3976ef281aec8a151cf"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fdb2aa0fbee3a8f262724c562b59407bc39a5b57",
+      "size": 434,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fdb2aa0fbee3a8f262724c562b59407bc39a5b57"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a1bcb1e3b63f76cc64234c7f23fc0761990ae882",
+      "size": 504928,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a1bcb1e3b63f76cc64234c7f23fc0761990ae882"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "829b1c587a755703d92740b8761195f77d851d84",
+      "size": 2276,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/829b1c587a755703d92740b8761195f77d851d84"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/scripts/check-prerequisites.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "d9f02a687307bf9dfae9c71f8b1283c39616a0bb",
+      "size": 4900,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d9f02a687307bf9dfae9c71f8b1283c39616a0bb"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/scripts/deploy.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "afb596b084747321b8d8c122a46a353987aa40a4",
+      "size": 8680,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/afb596b084747321b8d8c122a46a353987aa40a4"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/scripts/upload-documents.sh",
+      "mode": "100755",
+      "type": "blob",
+      "sha": "8789104531069524156fc3dd14a46984add3df3d",
+      "size": 8112,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/8789104531069524156fc3dd14a46984add3df3d"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/tsconfig.base.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6e34ede766b17465c2e69fd94b9b0039f9f3b864",
+      "size": 1670,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6e34ede766b17465c2e69fd94b9b0039f9f3b864"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d062b9f06b931af90561449d60e286c400f74bc6",
+      "size": 394,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d062b9f06b931af90561449d60e286c400f74bc6"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/__tests__/components/ErrorBoundary.test.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "90d9301fc56126d07b8a73111be6dd0d5303d78c",
+      "size": 2156,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/90d9301fc56126d07b8a73111be6dd0d5303d78c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/__tests__/components/Layout.test.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b963998f0710ca7811e9ad33225e18ae2954b951",
+      "size": 1529,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b963998f0710ca7811e9ad33225e18ae2954b951"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/components/ErrorBoundary.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2d4c892f88a568e1ed15a36f8fc40e84a1e59bf7",
+      "size": 3186,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/2d4c892f88a568e1ed15a36f8fc40e84a1e59bf7"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/components/Layout.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aba78dfa0dd3eaf1dbcc1f4b5dc21e3d12fb1a03",
+      "size": 6724,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/aba78dfa0dd3eaf1dbcc1f4b5dc21e3d12fb1a03"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/contexts/AuthContext.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6eaec77bad35bd40fbe5b3ab15678967dbfbf15",
+      "size": 5812,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c6eaec77bad35bd40fbe5b3ab15678967dbfbf15"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/e2e/auth.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ecd473aa4e6eb932a55afe3f26d67185a9833feb",
+      "size": 2247,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ecd473aa4e6eb932a55afe3f26d67185a9833feb"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/e2e/chat.spec.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3b8995623d70311b138b3dc6e9656234e9102f7",
+      "size": 5298,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/b3b8995623d70311b138b3dc6e9656234e9102f7"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/jest.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2ae335742347dce30d5f835c4fe01204cd6833b",
+      "size": 1038,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/e2ae335742347dce30d5f835c4fe01204cd6833b"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/jest.setup.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22e0c83d21ac5124c994b5264deb107ff6912480",
+      "size": 1429,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/22e0c83d21ac5124c994b5264deb107ff6912480"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/next.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6b658220b10fa16e85efd5f17af411e310251751",
+      "size": 587,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/6b658220b10fa16e85efd5f17af411e310251751"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be7d69f70b53ea1012e402fe08c29d4aae6800b7",
+      "size": 2077,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/be7d69f70b53ea1012e402fe08c29d4aae6800b7"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/pages/_app.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4d729a44300edc6bdc8bf65252c08ffbe902e1f",
+      "size": 5887,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/a4d729a44300edc6bdc8bf65252c08ffbe902e1f"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/pages/api/proxy.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc7e67a03a99bdd8ddedb814fc402ed0047195b5",
+      "size": 1039,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/fc7e67a03a99bdd8ddedb814fc402ed0047195b5"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/pages/chat.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d04b1631bf8d8e0a0fdf94ccf366a97aec3dc434",
+      "size": 9441,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d04b1631bf8d8e0a0fdf94ccf366a97aec3dc434"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/pages/dashboard.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad88d70d35ff295beb9843cd69af34f398fba3f7",
+      "size": 3057,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/ad88d70d35ff295beb9843cd69af34f398fba3f7"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/pages/index.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c2aa07bc4cff3c31a35061992e6e52893909efd9",
+      "size": 4054,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/c2aa07bc4cff3c31a35061992e6e52893909efd9"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/pages/login.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "334e56c05d8d6364c9a636dda7775838c885b758",
+      "size": 4697,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/334e56c05d8d6364c9a636dda7775838c885b758"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/playwright.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd6495c342711f44a307579707f269646b27ddb5",
+      "size": 2219,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/bd6495c342711f44a307579707f269646b27ddb5"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/services/api.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "32cfc61f9826c972f9cbb002aa85b449bec3ea88",
+      "size": 917,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/32cfc61f9826c972f9cbb002aa85b449bec3ea88"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/styles/globals.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f09450ed44306b435f152391e6e11b9bdcf014e",
+      "size": 1300,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7f09450ed44306b435f152391e6e11b9bdcf014e"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/styles/theme.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7de8bf59df7502d82ee85ba7b811b3a8ca16ed2",
+      "size": 2190,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d7de8bf59df7502d82ee85ba7b811b3a8ca16ed2"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27b78121404eb66e22bef15b95c72de2e64bf10c",
+      "size": 586,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/27b78121404eb66e22bef15b95c72de2e64bf10c"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/utils/api.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62d97b1f5fed5657774eaac870bfc9604251aba3",
+      "size": 2229,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/62d97b1f5fed5657774eaac870bfc9604251aba3"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/utils/auth.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "36db89fc9f1666ed7e6cacd12ddcb072f05396d2",
+      "size": 2361,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/36db89fc9f1666ed7e6cacd12ddcb072f05396d2"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/utils/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5033074e39d54da32c994355d545eff476bac5e",
+      "size": 1088,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/d5033074e39d54da32c994355d545eff476bac5e"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/utils/proxy-service-new.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c4a8a649a4aecfc80197d2296d30da3e1dfa024",
+      "size": 6320,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/9c4a8a649a4aecfc80197d2296d30da3e1dfa024"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/utils/proxy-service.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4527db328342d9f6a35312a2302a9688f79b037a",
+      "size": 862,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/4527db328342d9f6a35312a2302a9688f79b037a"
+    },
+    {
+      "path": "04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/web-console/utils/validation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b5b978507c7dd60d5e023923627b2c2c6b5b8df",
+      "size": 4937,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/7b5b978507c7dd60d5e023923627b2c2c6b5b8df"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67db8588217f266eb561f75fae738656325deac9",
+      "size": 10142,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/67db8588217f266eb561f75fae738656325deac9"
+    },
+    {
+      "path": "NOTICE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "616fc5889451895dbf9768e6787c8308c33bef22",
+      "size": 67,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/616fc5889451895dbf9768e6787c8308c33bef22"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "269a24bc3dc52d8cbc6e664b1b595ef55a29d5e8",
+      "size": 11628,
+      "url": "https://api.github.com/repos/awslabs/agentcore-samples/git/blobs/269a24bc3dc52d8cbc6e664b1b595ef55a29d5e8"
+    }
+  ],
+  "truncated": false,
+  "snapshot_scope": "Selected files only; not the full upstream repository tree."
+}

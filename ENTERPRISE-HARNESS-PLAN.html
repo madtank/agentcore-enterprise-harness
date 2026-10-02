@@ -1,0 +1,487 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Enterprise agent harness on AWS</title><style>body{margin:0;background:#eef3f7;color:#152d45;font:16px/1.65 system-ui,sans-serif}main{max-width:1000px;margin:40px auto;background:white;padding:48px 64px;border-radius:16px;box-shadow:0 12px 40px #152d4510}h1{font-size:42px;line-height:1.15;max-width:850px}h2{font-size:27px;color:#087f8c;margin-top:46px;line-height:1.3}h3{font-size:20px;margin-top:28px}a{color:#087f8c}table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.5;margin:24px 0}td,th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid #e5edf3}th{background:#e7eef4}tr:nth-child(even){background:#f8fafc}pre{overflow:auto;background:#f2f6f9;padding:20px;border-radius:9px}code{font-size:.9em}svg{width:100%;height:auto;margin:20px 0}li{margin:8px 0}nav{border-left:4px solid #087f8c;background:#f5fafb;padding:14px 22px;margin:28px 0;font-size:14px}nav ul{list-style:none;padding:0}nav li{margin:3px 0} .stamp{font-size:12px;letter-spacing:2px;color:#607589} @media(max-width:700px){main{margin:0;padding:24px 18px;border-radius:0}h1{font-size:32px}table{font-size:12px}td,th{padding:7px}}@media print{body{background:white}main{box-shadow:none;margin:0;padding:0;max-width:none}nav{display:none}h2,h3{break-after:avoid}tr{break-inside:avoid}a{color:inherit}pre{white-space:pre-wrap}}</style><main><div class="stamp">ARCHITECTURE • RESEARCH • IMPLEMENTATION</div><h1 id="enterprise-agent-harness-on-aws">Enterprise agent harness on AWS</h1><nav aria-label="Contents"><strong>Contents</strong><ul><li><a href="#1-recommended-starting-point">1. Recommended starting point</a></li><li><a href="#2-understand-the-pieces">2. Understand the pieces</a></li><li><a href="#3-reference-architecture">3. Reference architecture</a></li><li><a href="#4-the-concrete-development-mvp">4. The concrete development MVP</a></li><li><a href="#5-what-to-build-around-the-managed-harness">5. What to build around the managed harness</a></li><li><a href="#6-put-aws-agent-registry-in-the-right-role">6. Put AWS Agent Registry in the right role</a></li><li><a href="#7-policies-guardrails-approvals-and-network-controls">7. Policies, guardrails, approvals, and network controls</a></li><li><a href="#8-a-general-purpose-extension-model">8. A general-purpose extension model</a></li><li><a href="#9-what-the-github-examples-actually-provide">9. What the GitHub examples actually provide</a></li><li><a href="#10-delivery-roadmap-and-exit-criteria">10. Delivery roadmap and exit criteria</a></li><li><a href="#11-operations-cost-and-resilience">11. Operations, cost, and resilience</a></li><li><a href="#12-decisions-to-revisit-and-documentation-gaps">12. Decisions to revisit and documentation gaps</a></li><li><a href="#13-official-sources-and-reading-order">13. Official sources and reading order</a></li></ul></nav>
+<p><strong>A development MVP for internal knowledge and business operations, with a defined path to production.</strong></p>
+<p>Prepared 2 October 2026. Based on a downloaded snapshot of 577 official AgentCore developer-guide pages, the complete AWS guide PDF, supplemental API references, and five official GitHub repositories. AWS capabilities are cited below; architecture choices and thresholds are recommendations, not AWS guarantees.</p>
+<h2 id="1-recommended-starting-point">1. Recommended starting point</h2>
+<p>Start with <strong>the managed AgentCore harness</strong>, one authenticated AgentCore Gateway, one development AWS Agent Registry, a small internal knowledge corpus, and a thin application backend. Use one agent profile, one approved model, two reviewed skills, read-only tools, and a draft-only business workflow.</p>
+<p>The reusable foundation is the combination of the managed agent loop and your application's contracts for identity, sessions, skills, tools, releases, and approvals. New use cases should usually become a new profile, skill, or Gateway target. Add custom agent code only when the managed loop cannot express the behavior you need.</p>
+<p>For this MVP, use synthetic or non-sensitive development documents and a sandbox business system. Establish request validation, resource-scoped permissions, bounded execution, Registry review, and repeatable evaluations immediately. Introduce corporate SSO, real document permissions, private networking, stronger retention controls, and operational ownership before production use.</p>
+<p><strong>Provisional Region: <code>us-east-1</code>.</strong> It is supported by the principal capabilities in the downloaded Region table, including the harness and Registry. Confirm model availability and deployment-time service support. No residency requirement or existing identity provider has been specified. [S01, S02, S03]</p>
+<p>This repository includes a local, offline request-boundary starter, templates, and pinned sample references. The downloaded research archive also contains selected sample source. AWS infrastructure has not been provisioned, and live integration has not been verified in an AWS account.</p>
+<h2 id="2-understand-the-pieces">2. Understand the pieces</h2>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>What it does</th>
+<th>What your platform must add</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AgentCore harness</td>
+<td>Managed Strands-powered model/tool loop; configuration for tools, skills, memory, environment, limits, hooks, and endpoints</td>
+<td>Product behavior, validated requests, profiles, user/session binding, release rules</td>
+</tr>
+<tr>
+<td>AgentCore Runtime</td>
+<td>Hosts agent or MCP code; provides execution, scaling, authentication, and session isolation</td>
+<td>Agent code, framework integration, tool adapters, instrumentation where needed</td>
+</tr>
+<tr>
+<td>AWS Agent Registry</td>
+<td>Catalogs approved agent, MCP, skill, and custom resource records; offers search, browsing, and an MCP discovery endpoint</td>
+<td>Review criteria, artifact publishing, version resolution, permission checks, revocation handling</td>
+</tr>
+<tr>
+<td>AgentCore Gateway</td>
+<td>Connects APIs, Lambda functions, MCP servers, and supported connectors through a managed tool surface</td>
+<td>Target onboarding, narrow tool contracts, backend data authorization</td>
+</tr>
+<tr>
+<td>AgentCore Identity</td>
+<td>Workload identity and outbound credentials; integrates with existing identity providers</td>
+<td>User authentication design, consent, session mapping, scope selection</td>
+</tr>
+<tr>
+<td>Policy in AgentCore</td>
+<td>Authorizes Gateway actions and arguments; Cedar-compatible Dogwood adds temporal and guardrail conditions</td>
+<td>Reviewed business rules, trustworthy claims, policy tests, authorization outside Gateway</td>
+</tr>
+<tr>
+<td>Bedrock Guardrails</td>
+<td>Content safeguards; can be applied at application/model boundaries and through supported Gateway policies</td>
+<td>Correct coverage, thresholds, treatment of tool results, final-output handling</td>
+</tr>
+<tr>
+<td>AgentCore Memory</td>
+<td>Short-term conversation events and optional long-term extracted memory</td>
+<td>Actor scoping, retention/deletion, provenance, decisions about what may be remembered</td>
+</tr>
+<tr>
+<td>Knowledge retrieval</td>
+<td>Bedrock Knowledge Bases or another retrieval service searches business documents</td>
+<td>Ingestion, freshness, citations, source permissions, deletion propagation</td>
+</tr>
+<tr>
+<td>Browser / Code Interpreter</td>
+<td>Managed browser automation and isolated code execution</td>
+<td>Tool-specific permissions, egress controls, approved dependencies and artifact handling</td>
+</tr>
+<tr>
+<td>Observability / Evaluations</td>
+<td>Execution traces, metrics, logs, quality scoring, ground truth and trajectory evaluation</td>
+<td>SLOs, audit records, regression datasets, alert ownership and release thresholds</td>
+</tr>
+<tr>
+<td>Optimization</td>
+<td>Recommendations, immutable configuration bundles, and A/B testing</td>
+<td>Controlled adoption, regression checks, promotion decisions</td>
+</tr>
+</tbody>
+</table>
+<p>The harness is a managed abstraction running on Runtime. It is not necessary to deploy a separate custom Runtime agent merely to use the harness. Registry records describe resources; they do not deploy those resources or grant access to their endpoints. Gateway is the tool access path. [S01–S04, S11, S17, S19]</p>
+<p>The MCP endpoints also have different jobs: <strong>Registry MCP discovers resources; Gateway MCP invokes configured tools; a Runtime-hosted MCP server implements tools.</strong> A resource appearing in search does not automatically connect it to an agent.</p>
+<h2 id="3-reference-architecture">3. Reference architecture</h2>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 555" role="img" aria-label="AgentCore enterprise MVP architecture"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#71879a"/></marker></defs><rect width="1000" height="555" fill="#f8fafc" rx="16"/><path d="M470,67 L425,67" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M325,105 L325,175" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M165,217 L210,217" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M425,217 L470,217" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M685,217 L735,217" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M530,260 L365,330" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M578,260 L578,330" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M858,260 L858,330" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M325,260 L325,460" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M650,405 L650,460" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><path d="M855,405 L855,460" fill="none" stroke="#71879a" stroke-width="2" marker-end="url(#arrow)"/><rect x="225" y="30" width="200" height="75" rx="10" fill="#eef0fa" stroke="#7681b6" stroke-width="1.5"/><text x="325.0" y="63.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Release profile</text><text x="325.0" y="86.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">versions + reviewed artifacts</text><rect x="470" y="30" width="225" height="75" rx="10" fill="#eef0fa" stroke="#7681b6" stroke-width="1.5"/><text x="582.5" y="63.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">AWS Agent Registry</text><text x="582.5" y="86.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">approved resource discovery</text><rect x="20" y="175" width="145" height="85" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="92.5" y="213.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Developer</text><text x="92.5" y="236.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">internal chat / client</text><rect x="210" y="175" width="215" height="85" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="317.5" y="213.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Application boundary</text><text x="317.5" y="236.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">identity, sessions, input validation</text><rect x="470" y="175" width="215" height="85" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="577.5" y="213.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">AgentCore harness</text><text x="577.5" y="236.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">managed loop + isolated session</text><rect x="735" y="175" width="245" height="85" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="857.5" y="213.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">AgentCore Gateway</text><text x="857.5" y="236.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">authenticated + ENFORCE policy</text><rect x="245" y="330" width="180" height="75" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="335.0" y="363.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Approved model</text><text x="335.0" y="386.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">Bedrock inference</text><rect x="470" y="330" width="215" height="75" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="577.5" y="363.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Conversation memory</text><text x="577.5" y="386.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">actor / session scoping</text><rect x="735" y="330" width="245" height="75" rx="10" fill="#ffffff" stroke="#8dafc4" stroke-width="1.5"/><text x="857.5" y="363.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Knowledge + operations</text><text x="857.5" y="386.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">retrieval / sandbox reads / drafts</text><rect x="210" y="460" width="770" height="65" rx="10" fill="#e5f5f2" stroke="#399486" stroke-width="1.5"/><text x="595.0" y="488.5" text-anchor="middle" fill="#152d45" font-family="Arial,sans-serif" font-size="16" font-weight="700">Observability + evaluations + release gates</text><text x="595.0" y="511.5" text-anchor="middle" fill="#476277" font-family="Arial,sans-serif" font-size="11">telemetry, usage, regression evidence and controlled promotion</text></svg>
+<p><strong>Runtime plane:</strong> the application's request path, harness session, model calls, memory, Gateway, and business systems.</p>
+<p><strong>Control plane:</strong> repositories, skill artifacts, Registry records, profile resolution, policies, evaluations, and release promotion. An employee chat request should not have control-plane permissions.</p>
+<p><strong>Operations plane:</strong> traces, costs, quality signals, alerts, incident controls, and durable action receipts. Keep identity, policy decisions, and business audit evidence distinct from model-generated explanations.</p>
+<p>For later write operations, add an application-owned approval workflow and a deterministic business executor. The initial MVP stops at a prepared draft. The supplied starter prepares bounded invocation requests; it does not implement this entire architecture.</p>
+<h2 id="4-the-concrete-development-mvp">4. The concrete development MVP</h2>
+<p>Build three useful behaviors:</p>
+<ol>
+<li><strong>Answer an internal question with citations.</strong> Search a small, versioned corpus of policies and runbooks. Return source references and distinguish documented facts from uncertain conclusions.</li>
+<li><strong>Summarize operational information.</strong> Retrieve a sandbox ticket or status record and produce a structured summary and suggested next steps.</li>
+<li><strong>Prepare a business-action draft.</strong> Produce a proposed ticket update or request with exact fields and a preview. Store a draft in the application or return it to the user; do not modify a real business system.</li>
+</ol>
+<p>Start with a single <code>internal_knowledge_ops</code> profile, one approved Bedrock model, and two skills: <code>knowledge-answering</code> and <code>operations-draft</code>. A skill supplies instructions and optional resources; it does not grant tool permissions.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Development MVP</th>
+<th>Before production</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>Local developer client or small internal backend; text-only chat input</td>
+<td>Corporate authentication, user authorization, throttling, restricted direct service access</td>
+</tr>
+<tr>
+<td>Harness</td>
+<td>Managed microVM-backed harness; fixed model and bounded loop</td>
+<td>Named version-pinned endpoint, reviewed hooks, operational limits</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Exact allowlist of retrieval and read-only sandbox tools</td>
+<td>Protected writes, backend authorization, verified credential delegation</td>
+</tr>
+<tr>
+<td>Knowledge</td>
+<td>Non-sensitive development corpus shared by pilot users</td>
+<td>Document-level ACL enforcement, freshness and deletion tests</td>
+</tr>
+<tr>
+<td>Memory</td>
+<td>Short-term conversation state with explicit actor/session mapping</td>
+<td>Retention, deletion, custom-key needs, evaluated long-term memory</td>
+</tr>
+<tr>
+<td>Registry</td>
+<td>One IAM-authenticated dev Registry; manual review</td>
+<td>Separate production catalog/release scope and publisher/curator separation</td>
+</tr>
+<tr>
+<td>Skills</td>
+<td>Reviewed local examples published into immutable S3 prefixes</td>
+<td>Digest verification, dependency review, reproducible release artifacts</td>
+</tr>
+<tr>
+<td>Policy</td>
+<td><code>ENFORCE</code>; permit only explicitly approved tool actions</td>
+<td>User/role and argument restrictions; durable business constraints</td>
+</tr>
+<tr>
+<td>Content controls</td>
+<td>Prompt and retrieved-content boundary rules; output review on demo corpus</td>
+<td>Enforced content/PII checks at the required model/application/tool boundaries</td>
+</tr>
+<tr>
+<td>Operations</td>
+<td>Traces, usage metrics, repeatable regression cases</td>
+<td>SLOs, online quality sampling, audit retention and incident exercises</td>
+</tr>
+</tbody>
+</table>
+<p>Suggested starting limits are <strong>12 iterations, 120 seconds per invocation, and <code>maxTokens = 4096</code></strong>, with short session idle/lifetime settings selected after observing cold starts and cost. These are tunable starting values. The API references disagree about invoke-time <code>maxTokens</code> scope; verify actual service behavior and keep an independent application usage ledger. None of these settings is a complete monetary budget. [S05, S07, S23, S24]</p>
+<p>Use an exact <code>allowedTools</code> list. The harness exposes <code>shell</code> and <code>file_operations</code> by default if unrestricted. Exclude shell, browser, and code execution from this knowledge MVP. Validate which helper tool the managed skill loader needs and allow only that reviewed capability; avoid granting <code>@builtin</code> broadly. Do not grant the separate direct-command APIs to normal application callers. [S05, S08]</p>
+<p>Start with short-term memory and no long-term extraction strategy. Select the setting explicitly: direct service API creation enables managed memory by default; the current AgentCore CLI defaults to memory disabled. Reusing a session gives conversational continuity, but it does not guarantee the same underlying microVM forever. [S02, S06]</p>
+<p>For retrieval, prefer the native Gateway connector if using <strong>Bedrock Managed Knowledge Bases</strong>, where it fits the data and permissions model. That connector specifically supports the managed Knowledge Bases offering, not every legacy/custom Bedrock KB. Otherwise wrap the existing retrieval API with a small Lambda or MCP adapter. [S20]</p>
+<h2 id="5-what-to-build-around-the-managed-harness">5. What to build around the managed harness</h2>
+<h3 id="a-a-strict-application-request-boundary">A. A strict application request boundary</h3>
+<p>Expose a narrow product API such as <code>message</code>, <code>conversationId</code>, and an approved <code>profileId</code>. Construct the <code>InvokeHarness</code> request on the server. The ordinary caller must not supply <code>model</code>, <code>systemPrompt</code>, <code>skills</code>, <code>tools</code>, <code>allowedTools</code>, provider URLs, <code>additionalParams</code>, <code>actorId</code>, or increased execution limits.</p>
+<p>Derive the actor from the verified identity and scope the conversation to that actor and organization. Generate UUID sessions on the server; check ownership on every resume. Reject a different user's session, unknown message roles, unsolicited <code>toolUse</code> blocks, and inline results without an authenticated pending handoff. Keep user text, retrieved documents, and tool outputs in their own trust boundaries.</p>
+<p>The harness validates request structure but AWS explicitly leaves semantic input validation and session-to-user mapping to customers. Model configuration can redirect requests or change credentials if freely forwarded. Per-invocation skills can also replace a same-named configured skill. Restrict callers so they cannot bypass the application by invoking the underlying resource directly with arbitrary overrides. [S08, S23]</p>
+<p>The included CLI starter demonstrates this boundary and persistent session ownership for a trusted local developer. Its <code>--user</code> argument is a local label, not enterprise authentication.</p>
+<h3 id="b-an-agent-profile-and-a-release-lock">B. An agent profile and a release lock</h3>
+<p>An application profile ties together:</p>
+<ul>
+<li>Purpose, owner, environment, and permitted data classifications.</li>
+<li>Harness resource and named endpoint; approved model configuration.</li>
+<li>Skill artifact references, digests, and evaluation evidence.</li>
+<li>Gateway targets and exact model-facing tool names.</li>
+<li>Execution limits, memory choices, policy version evidence, and content-control configuration.</li>
+<li>Registry record IDs/revisions and promotion criteria.</li>
+</ul>
+<p>Keep a <strong>release lock</strong> that records the resolved versions and artifact digests used by a deployment. AWS Registry records, harness versions, and configuration bundles help with parts of this problem, but they are not interchangeable.</p>
+<p>Harness versions are immutable snapshots of configuration. A version containing an S3 URI or a Git URL can still load changed external content if that source is mutable. A remote MCP URL may also serve a changed schema. Pin skill contents and tool deployment/schema versions separately. [S03, S09, S10, S21]</p>
+<h3 id="c-a-tool-onboarding-contract">C. A tool onboarding contract</h3>
+<p>For each target record the owner, version, input/output schema, authentication mode, data classification, side effects, timeouts, retry rules, and quota expectations. Keep inputs narrow; avoid generic tools that accept arbitrary SQL, URLs, cloud actions, or shell commands when a business operation can be defined explicitly.</p>
+<p>Separate <code>get_ticket</code>, <code>prepare_ticket_update</code>, and <code>commit_ticket_update</code>. The last operation belongs to a deterministic executor with permission checks and an action receipt. Validate schemas at both the Gateway contract and backend. Tool descriptions and MCP annotations help the model choose tools but do not authorize actions.</p>
+<p>For user-scoped systems, verify the credential path. Harness inbound <strong>SigV4 does not currently propagate per-user identity for Token Vault user-scoped OAuth or on-behalf-of exchange</strong>. An application-assigned <code>actorId</code> scopes memory; it does not turn a shared IAM identity into delegated downstream user authority. Use the supported inbound OAuth/JWT path where that delegation is required. A dev service identity is acceptable only for data all pilot users may access. [S08, S12]</p>
+<h3 id="d-knowledge-access-enforcement">D. Knowledge access enforcement</h3>
+<p>Keep authoritative knowledge retrieval separate from conversational memory. Store document source IDs, ACL metadata, versions, and ingestion times. Carry trusted user/group context into retrieval before passages reach the model. Verify that the source actually enforces the chosen ACL scheme; an agent-supplied metadata filter is insufficient.</p>
+<p>The Managed Knowledge Bases Gateway connector passes <code>userContext</code> through but <strong>does not derive it from the IAM caller</strong>. Inject or overwrite that value from verified application identity in a trusted adapter/interceptor. Never let the model choose a different user ID. If the managed harness integration cannot carry the required context safely, use a dedicated retrieval adapter or move that agent to custom Runtime code. [S20]</p>
+<p>A production ACL change must invalidate affected cached passages and access paths. Conversation history can retain content a user previously accessed; define when to redact/delete history or force a new session after permission changes. Hiding future retrieval results alone is not complete revocation.</p>
+<h2 id="6-put-aws-agent-registry-in-the-right-role">6. Put AWS Agent Registry in the right role</h2>
+<p><strong>Use Registry as a reviewed catalog and a source of deployment candidates.</strong> In the MVP, developers discover resources through Registry and the release pipeline selects a fixed set. Introduce agent-driven resource selection later, inside a profile's preauthorized envelope.</p>
+<h3 id="current-service-namespace">Current service namespace</h3>
+<p>AWS launched the independent namespace on <strong>6 August 2026</strong>. New integrations use <code>agent-registry</code> and <code>agent-registry-control</code> SDK/CLI clients, <code>agent-registry:*</code> IAM actions, and <code>arn:aws:agent-registry:...</code> resource ARNs. Identity, Gateway, Runtime, harness, and Policy retain their own <code>bedrock-agentcore</code> namespaces.</p>
+<p>The Registry discovery MCP endpoint is:</p>
+<pre><code class="language-text">https://agent-registry.&lt;region&gt;.api.aws/registry/&lt;registryId&gt;/mcp
+</code></pre>
+<p>The old Registry preview namespace shuts down on <strong>30 October 2026</strong>. A new project should start directly on the new namespace. Existing users need the full schema/data/configuration migration, not merely a string replacement. [S11, S14]</p>
+<h3 id="records-and-artifact-storage">Records and artifact storage</h3>
+<p>Current semantic record types are <code>AGENT</code>, <code>MCP</code>, <code>SKILL</code>, and <code>CUSTOM</code>. Descriptors carry MCP server information, A2A agent cards, skill definitions, or custom JSON. Record <code>name + recordVersion</code> is the deduplication key. A non-A2A harness can be registered as <code>AGENT</code> with a <code>custom</code> descriptor rather than a fabricated A2A card. [S13, S15]</p>
+<p>Store actual skills and binaries in Git/S3/ECR/package repositories. Registry can retain skill markdown for discovery, but <strong>does not store a skill's other files</strong>. Avoid treating Registry as a package manager or execution engine. [S13]</p>
+<p>Recommended flat custom metadata fields: <code>owner</code>, <code>environment</code>, <code>dataClassification</code>, <code>sideEffects</code>, <code>artifactUri</code>, <code>artifactDigest</code>, <code>evaluationEvidenceUri</code>, and <code>reviewedAt</code>. Keep arrays and nested dependency trees in a linked artifact manifest; the Registry custom-metadata schema supports a restricted flat set of string, enum, URI, and boolean fields.</p>
+<p>Schema evolution is additive: saved fields cannot be removed/retyped. Requiring a new field can make an existing approved record non-compliant <strong>without withdrawing its approval</strong>. The promotion pipeline must check both approved revision and metadata compliance. [S16]</p>
+<h3 id="publication-and-resolution">Publication and resolution</h3>
+<ol>
+<li>Build and review the resource and its narrow permissions.</li>
+<li>Publish its immutable artifact and capture its digest/schema version.</li>
+<li>Create a Registry draft with owner, version, access information, and evidence.</li>
+<li>Submit for review. A curator verifies suitability and approves.</li>
+<li>Resolve the approved revision into the release lock and test it.</li>
+<li>Publish a harness version and deliberately update the development or production endpoint.</li>
+</ol>
+<p>The approval lifecycle is <code>DRAFT → PENDING_APPROVAL → APPROVED/REJECTED</code>; deprecation is terminal. Editing an approved record creates a new draft while the prior approved revision remains discoverable. Discovery indexing is eventually consistent, sometimes taking minutes. Synchronization from MCP/A2A endpoints is triggered explicitly; it is not guaranteed continuous schema synchronization. [S15, S18]</p>
+<p>Use manual review in the MVP; the reviewed sample's new API expresses this as <code>approvalConfiguration: {autoApprovalRules: []}</code>. Avoid copying older README language such as <code>autoApproval: false</code> into current API payloads. [G01]</p>
+<h3 id="discovery-is-not-authorization-or-revocation">Discovery is not authorization or revocation</h3>
+<p>Search ranking and metadata filters only select candidates. The runtime must still enforce endpoint permissions, Gateway policies, backend access checks, and the release allowlist. Approved code is not safe for every user or dataset.</p>
+<p>Rejecting or deprecating a record removes discovery visibility, but an agent can retain an endpoint or an already loaded skill. Revoke at the execution boundary too: block the tool in Gateway/backend, remove the credential grant or allowed target, publish a restricted profile, and stop affected sessions when necessary. Use Registry lifecycle events to drive re-resolution and incident workflows, with an application emergency-deny control that does not wait for search indexing.</p>
+<p>For production, restrict publishing, curation, and consumption to separate roles. Registry control-plane APIs always use IAM even when discovery is JWT-authenticated. Registry auth type and JWT discovery URL are immutable after creation, so choose them deliberately or create a new registry for a changed auth model. [S12, S15]</p>
+<p>Organization sharing through AWS RAM is useful later. Its record-level creator/source-account conditions do not filter search/list enumeration. Use separate registries or explicitly restrict enumeration if catalog metadata itself must be isolated. [S25]</p>
+<h2 id="7-policies-guardrails-approvals-and-network-controls">7. Policies, guardrails, approvals, and network controls</h2>
+<p>Treat these as independent controls with different enforcement points.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Enforcement point</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentication</td>
+<td>Product/backend and service ingress</td>
+<td>Only an authenticated employee may start a conversation</td>
+</tr>
+<tr>
+<td>Session ownership</td>
+<td>Application session store</td>
+<td>Employee A cannot resume Employee B's conversation</td>
+</tr>
+<tr>
+<td>AWS permission</td>
+<td>IAM, resource policies, permission boundaries/SCPs</td>
+<td>Harness role can invoke only the chosen Gateway and model</td>
+</tr>
+<tr>
+<td>Model-facing tool selection</td>
+<td>Harness <code>allowedTools</code></td>
+<td>Offer only retrieval and sandbox ticket-read operations</td>
+</tr>
+<tr>
+<td>Business authorization</td>
+<td>Gateway Policy and backend</td>
+<td>Read permitted records; writes require exact authorization</td>
+</tr>
+<tr>
+<td>Content safeguards</td>
+<td>Application/model and relevant Gateway request/response paths</td>
+<td>Detect suspicious instructions and suppress sensitive output</td>
+</tr>
+<tr>
+<td>Execution controls</td>
+<td>Harness limits, rate limits, application budget ledger</td>
+<td>Bounded loop and controlled request frequency</td>
+</tr>
+<tr>
+<td>Human approval</td>
+<td>Application/workflow plus deterministic executor</td>
+<td>Commit only the approved payload once</td>
+</tr>
+<tr>
+<td>Network restriction</td>
+<td>VPC endpoints, egress rules, target reachability</td>
+<td>Agent cannot reach unapproved external endpoints</td>
+</tr>
+<tr>
+<td>Audit evidence</td>
+<td>Application and business executor</td>
+<td>Record actor, action digest, decision, and receipt</td>
+</tr>
+</tbody>
+</table>
+<p>Gateway policies use <strong>default-deny and forbid-wins</strong> semantics. Use <code>ENFORCE</code> for the actual read-only MVP permissions. <code>LOG_ONLY</code> is useful to tune a new rule against harmless replay traffic, but it permits requests even when a policy would deny them. A principal with <code>UpdateGateway</code> can change mode or remove the policy engine; restrict that control-plane permission. [S17]</p>
+<p>Dogwood is compatible with Cedar and adds temporal conditions and guardrail information providers. Gateway policies can inspect supported request/response fields, including content safety checks. These guardrail scores are model-derived and can vary; deterministic policy evaluation does not make the underlying content classifier deterministic. <code>suppressOutput</code> cannot reverse an action that already executed. [S17, S22]</p>
+<p>Gateway policy governs traffic that traverses Gateway. It does not cover arbitrary direct MCP connections, shell commands, code execution, model calls made outside the governed path, or external writes performed by an inline function. Apply the appropriate controls at each path or eliminate the bypass.</p>
+<h3 id="lifecycle-hooks">Lifecycle hooks</h3>
+<p>Use synchronous Lambda <code>before_invocation</code> and <code>before_tool_call</code> hooks where additional validation is needed, with failure mode <code>deny</code> and short timeouts. Reject a truncated context if complete context is required for the decision. SNS and EventBridge hooks are notifications; they cannot block the loop. [S04]</p>
+<p>An <code>after_tool_call</code> hook runs after the action. An <code>after_invocation</code> hook cannot retract streamed output. For strict final-output filtering, collect the assistant text in the backend, evaluate it, and release only approved output; alternatively implement a specifically tested safe streaming boundary. Do not expose raw model reasoning or full tool results by default.</p>
+<p>Inline functions are useful for handing a request back to the application. Process an action only after the full stream reaches the appropriate final <code>tool_use</code> handoff. The after-tool event for a client-supplied result is not proof that a business action occurred; the executor must produce its own receipt. [S04, S05]</p>
+<h3 id="approval-and-action-integrity">Approval and action integrity</h3>
+<p>For later writes, store a pending action with the actor, target, canonical argument digest, originating run/profile version, expiry, and idempotency key. Present the exact preview. Verify the approver's authority, recheck current source permissions and policy, and commit that same payload once. Changing any material field invalidates approval. A model assertion such as <code>approved: true</code> is never approval evidence.</p>
+<p>Temporal Gateway policies can enforce action sequencing and session-level counters when configured with a policy session. Validate session propagation for the exact architecture: the documented automatic multi-hop behavior is Gateway → Runtime → Gateway within one account and Region. Do not assume direct harness invocation establishes the same policy session. A 24-hour idle expiry is not a durable daily budget or transaction ledger. Use backend records for irreversible operations and concurrency-sensitive invariants. [S26]</p>
+<h3 id="private-networking-and-data-residency">Private networking and data residency</h3>
+<p>Public networking with only development data is sufficient for the initial MVP. Before real internal data, decide private ingress, VPC egress, allowed external domains, regional model routes, and credential endpoints. PrivateLink ingress and VPC outbound connectivity are separate concerns.</p>
+<p>A VPC harness needs private ECR API/DKR and S3 endpoints for its managed image, plus the necessary inference/AgentCore/logging endpoints. It does not inherently require NAT for the managed image pull. External Git/MCP/provider access still needs a permitted egress route. Gateway VPC egress has its own setup. [S08, S27]</p>
+<p>Registry embedding inference may process prompts/results across <strong>any commercial AWS Region</strong>, although stored data stays in the primary Region. Do not put sensitive operational payloads in discovery queries; use capability descriptions. Review this documented behavior and model/evaluation cross-region routing before making a strict residency claim. [S28]</p>
+<h2 id="8-a-general-purpose-extension-model">8. A general-purpose extension model</h2>
+<p>Create specialized profiles over shared platform contracts. A knowledge assistant needs retrieval; an operations agent needs status tools and approved actions; a research agent may need browser access; a coding agent may need filesystem/shell/code tools. Each profile receives only its required capabilities.</p>
+<p>Use the AgentSkills format: <code>SKILL.md</code> frontmatter with name/description and optional <code>scripts/</code>, <code>references/</code>, and <code>assets/</code>. Keep instructions focused on task procedure. Load progressively rather than adding all skills to every prompt. Review skill scripts as executable software.</p>
+<p>For release-pinned skills, prefer immutable S3 prefixes or image-baked paths. The documented native Git skill source exposes URL/path/auth but no commit/ref field; resolve a Git commit in CI and publish the reviewed contents to immutable S3. S3 bucket versioning alone is insufficient if the harness URI reads the current object. Deny mutation of released prefixes and keep digest evidence. [S09, S29]</p>
+<p>For MCP integrations, register the server and tool schema, route enterprise actions through Gateway, and bind its version to the profile release. Support schema-change notifications/review and validate returned payloads. Runtime-hosted custom MCP servers are appropriate when existing APIs need a reusable tool wrapper; do not build a server for every simple Lambda-backed action.</p>
+<p>For multi-agent work, introduce a coordinator only when independently scoped specialists improve measured results. Delegate explicit task contracts with smaller budgets and traceable user authority. A2A is a transport for compatible agent interfaces; it does not automatically give a discovered harness an A2A endpoint or solve authorization.</p>
+<p>For deterministic workflows, use Step Functions or application orchestration. The managed harness does not offer arbitrary custom graph patterns or arbitrary framework selection. AWS supports export to editable Strands Python today; other export frameworks are described as coming soon. An export still needs inspection of generated notes, dependencies, hooks, and authorization behavior. [S02, S10]</p>
+<h2 id="9-what-the-github-examples-actually-provide">9. What the GitHub examples actually provide</h2>
+<p>The reference package snapshots source at commit <code>4cd43c71c642ce2428a39c6b025a73b686c74f8f</code> of the official sample repository. Review covered source and READMEs; examples were not deployed or exercised against AWS.</p>
+<table>
+<thead>
+<tr>
+<th>Starter</th>
+<th>Usefulness</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Official harness getting started</td>
+<td>Create/invoke loop, client helpers and session behavior</td>
+<td>Use as the lifecycle reference; restrict its sample role and builtins</td>
+</tr>
+<tr>
+<td>Harness execution limits</td>
+<td>Working examples of iteration/time/token controls</td>
+<td>Adapt into the MVP profile</td>
+</tr>
+<tr>
+<td>Harness Gateway integration</td>
+<td>Shows how a Gateway becomes a harness tool source</td>
+<td>Reuse the integration shape; replace <code>NONE</code> auth and public demo target</td>
+</tr>
+<tr>
+<td>Harness skills</td>
+<td>Demonstrates richer artifacts and dependency needs</td>
+<td>Use concepts; publish pinned skill content instead of installing on every session</td>
+</tr>
+<tr>
+<td>Harness OAuth</td>
+<td>Concrete authentication and downstream tool plumbing</td>
+<td>Use when adding user-scoped systems; review its demo identity setup</td>
+</tr>
+<tr>
+<td>Registry end to end</td>
+<td>New namespace, publishing and governance persona checks</td>
+<td>Use the current Python code; its README retains older record-type/API terminology</td>
+</tr>
+<tr>
+<td>Registry admin approval</td>
+<td>EventBridge and approval automation structure</td>
+<td>Reuse event/review patterns later; omit its external notification integration from this setup</td>
+</tr>
+<tr>
+<td>Registry dynamic skills</td>
+<td>Demonstrates discovery, loading, and <code>SKILL</code> descriptors</td>
+<td>Reference only initially; downloader installs packages and shell tools run on the local host</td>
+</tr>
+<tr>
+<td>Runtime discovery and invocation</td>
+<td>Dynamic specialist discovery pattern</td>
+<td>Defer until static profile quality is established</td>
+</tr>
+<tr>
+<td>Policy tool access / guardrails</td>
+<td>Enforced access decisions and content checks</td>
+<td>Reuse tested policy authoring patterns with your actual generated schema</td>
+</tr>
+<tr>
+<td>CI/CD-gated evaluations</td>
+<td>Authenticated MCP example and quality gates</td>
+<td>Borrow regression/gate structure; do not adopt its entire deployed stack for the first MVP</td>
+</tr>
+<tr>
+<td>CDK knowledge-base RAG agent</td>
+<td>Broader retrieval/infrastructure example</td>
+<td>Reference for custom Runtime escape path; heavier than the managed-harness MVP</td>
+</tr>
+</tbody>
+</table>
+<p>The current recommended tooling is <strong><code>aws/agentcore-cli</code></strong> (<code>@aws/agentcore</code>). The older Python <code>bedrock-agentcore-starter-toolkit</code> repository explicitly calls itself legacy and directs new projects to the newer CLI. Do not install both into the same command environment without checking the <code>agentcore</code> name collision. [G02, G05]</p>
+<p>Strands is a useful custom-code fallback, not an additional dependency required to write the first managed harness client. AWS Agent Toolkit supplies AWS-building skills/MCP integrations; add specific reviewed capabilities if needed, rather than enabling every AWS skill for a business knowledge assistant. [G03, G04]</p>
+<p>See <code>EXAMPLES-REVIEW.md</code> for direct links, the precise review scope, and inclusion decisions. Local upstream files are reference snapshots with original licensing, not the default execution path.</p>
+<h2 id="10-delivery-roadmap-and-exit-criteria">10. Delivery roadmap and exit criteria</h2>
+<p>Time estimates assume a small team, an available AWS dev account, and accessible data. They are planning ranges.</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Work</th>
+<th>Exit criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local foundation — complete in this package</td>
+<td>Source snapshots, architecture, examples, profiles, strict request builder and session ownership checks</td>
+<td>Offline validation passes; request payloads are reproducible</td>
+</tr>
+<tr>
+<td>Dev foundation — roughly 2–3 working days</td>
+<td>Configure account/Region, deploy managed harness, Gateway, dev Registry and short-term memory</td>
+<td>Harness invokes with bounded limits; resource scopes and default tool restrictions verified</td>
+</tr>
+<tr>
+<td>Useful pilot — roughly 3–5 working days</td>
+<td>Add development corpus, retrieval adapter/connector, two skills and sandbox operations reads</td>
+<td>Citations, useful answers, draft-only workflow, correct session isolation</td>
+</tr>
+<tr>
+<td>Promotion preparation — roughly 1–2 weeks</td>
+<td>Add SSO, real source ACLs, protected actions if needed, content controls, release pipeline, telemetry and runbooks</td>
+<td>Production gates below pass with named owners and recorded evidence</td>
+</tr>
+<tr>
+<td>Further expansion</td>
+<td>New profiles, tools, specialist agents and optimization experiments</td>
+<td>Measured benefit without broadening unrelated permissions</td>
+</tr>
+</tbody>
+</table>
+<p>Recommended pilot dataset: <strong>60 cases</strong>: 25 knowledge/citation questions, 10 operational summaries, 10 draft-generation tasks, and 15 adversarial/authorization/limit cases. Use deterministic checks for access, side effects, tool sequencing, and schema validity; use LLM evaluation plus human sampling for groundedness and helpfulness. [S19]</p>
+<p>Suggested promotion targets are zero unauthorized tool/backend access in the required negative suite, zero duplicate business writes in replay tests, all draft outputs conforming to schema, at least 90% successful grounded answers on the reviewed pilot set, and measured latency/cost within a budget you set after real pilot traffic. These are initial acceptance proposals, not service SLAs.</p>
+<p>Before promotion, verify:</p>
+<ul>
+<li>Verified SSO identity maps to sessions, actors, and required downstream permissions.</li>
+<li>Retrieval and cached conversation content cannot cross the chosen access boundary.</li>
+<li>Gateway <code>ENFORCE</code>, exact tools, hook failures, and direct-command restrictions resist bypass tests.</li>
+<li>Writes require exact payload approval, idempotency, and durable business receipts.</li>
+<li>Harness versions, skill artifacts, tool schemas, and policy evidence are pinned in a release lock.</li>
+<li>Production uses a named endpoint. <code>DEFAULT</code> tracks the newest harness version automatically.</li>
+<li>Trace logging and content retention are appropriate for the data; business audit evidence is durable.</li>
+<li>Stop-session, tool revocation, credential revocation, rollback, and recovery exercises succeed.</li>
+<li>Owners have agreed error/latency objectives, support escalation, spend limits, and on-call handling.</li>
+</ul>
+<p>The detailed task list and dependency order are in <code>MVP-BACKLOG.md</code>. The enforcement mapping is in <code>CONTROL-MATRIX.csv</code>.</p>
+<h2 id="11-operations-cost-and-resilience">11. Operations, cost, and resilience</h2>
+<p>Harness traces are automatic, but CloudWatch Transaction Search needs one-time account setup. Record application run IDs alongside the harness/session/actor, tool action, profile release, policy decision, token usage, latency, and errors. Correlation headers are telemetry, not authorization claims. Configure log/trace retention explicitly; do not promise redaction without verifying the emitted payloads. [S07, S08]</p>
+<p>Enable the required CloudTrail data events. Harness data-plane events use underlying Runtime event names and ARNs; monitor those instead of expecting a harness-specific resource/event for every operation. Registry uses the independent service namespace for current eventing and audit integrations. [S07, S14]</p>
+<p>Monthly cost is the sum of model inference, Runtime CPU and memory, Gateway/discovery/policy operations, Memory events/storage/retrieval, knowledge ingestion/retrieval, optional browser/code sessions, evaluations, CloudWatch, storage, and networking. There is no separate harness charge. Do not estimate a fixed total before measuring model turns, context sizes, tool counts, session memory lifetime, and concurrency. [S07, S30]</p>
+<p>Runtime CPU consumption can pause while awaiting model/tool I/O if no background CPU work occurs; memory remains billable while sessions run. Narrow tool definitions and progressive skill loading reduce repeated model input. An output-token cap does not cap input tokens or all AWS costs. Use daily application quotas and AWS billing alarms as complementary controls; billing alarms are not hard immediate spend stops.</p>
+<p>Use short request timeouts and bounded retries. Read-only tool calls may be retried according to their contracts; write calls require idempotency and a checked action receipt. Treat client disconnection separately from stopping a Runtime session; provide a cancellation path and verify actual behavior.</p>
+<p>For early resilience, version infrastructure and release artifacts, keep a last known good endpoint target, and rehearse restoring the development service. Production RTO/RPO and any regional failover need deliberate design. A second Region requires separately deployed resources, data/access decisions, and verified credentials and model availability; do not assume every AgentCore component or active session fails over automatically.</p>
+<h2 id="12-decisions-to-revisit-and-documentation-gaps">12. Decisions to revisit and documentation gaps</h2>
+<p>Decisions intentionally left open: corporate IdP, real knowledge source, business system, approved model, monetary budget, data retention, RTO/RPO, and production Region/account structure. None blocks the offline package; each affects live integration.</p>
+<p>The downloaded docs contain several inconsistencies that should be checked during implementation:</p>
+<ol>
+<li>The service Region table and Registry cross-region page list five Registry Regions, while a release-note paragraph says nine. The plan chooses a Region listed by both detailed sources.</li>
+<li>The harness web-search walkthrough says <code>us-east-1</code> only; the main Region table lists additional web-search Regions. Web search is optional here.</li>
+<li><code>CreateHarness</code> documents <code>maxTokens</code> as aggregate output tokens per invocation; <code>InvokeHarness</code> describes generated tokens per iteration. The harness operations page describes an invocation budget. Validate the service behavior before relying on invoke-time limits for spend.</li>
+<li>The skills guide says invocation skills append and same-name invocation skills win; the invoke API summary calls the field an override. For ordinary callers this field is excluded entirely.</li>
+<li>Registry search prose says latest revision approved, while the dedicated lifecycle page documents an older approved revision remaining discoverable during editing. Resolve against the explicit revision lifecycle and test the returned revision.</li>
+<li>Some sample READMEs describe the old Registry record model while their Python source already uses the new namespace/schema. Follow current service schemas and code-level verification.</li>
+</ol>
+<h2 id="13-official-sources-and-reading-order">13. Official sources and reading order</h2>
+<p>Read S02, S03, S08, S11, S17, S20, and S19 first. Every developer-guide page is available offline under <code>sources/html/</code> and <code>sources/text/</code>; download manifests include URLs, timestamps, byte counts, and SHA-256 hashes. Supplemental references and GitHub snapshots have their own manifests.</p>
+<ul>
+<li><strong>S01</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/what-is-bedrock-agentcore.html">AgentCore overview</a></li>
+<li><strong>S02</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness.html">Managed harness</a></li>
+<li><strong>S03</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-vs-runtime.html">Harness versus Runtime</a></li>
+<li><strong>S04</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-lifecycle-hooks.html">Lifecycle hooks</a></li>
+<li><strong>S05</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-tools.html">Harness tools and allowlists</a></li>
+<li><strong>S06</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-memory.html">Harness memory</a></li>
+<li><strong>S07</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-operations.html">Observability and cost controls</a></li>
+<li><strong>S08</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-security.html">Harness security and shared responsibility</a></li>
+<li><strong>S09</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-skills.html">Harness skills</a></li>
+<li><strong>S10</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-export.html">Export harness to code</a></li>
+<li><strong>S11</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry.html">AWS Agent Registry</a></li>
+<li><strong>S12</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-supported-auth-types.html">Registry inbound authorization</a></li>
+<li><strong>S13</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-supported-record-types.html">Record types and descriptors</a></li>
+<li><strong>S14</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-faq.html">Registry namespace migration</a></li>
+<li><strong>S15</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-record-lifecycle.html">Registry record lifecycle</a></li>
+<li><strong>S16</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-custom-metadata-schema.html">Custom metadata schema</a></li>
+<li><strong>S17</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy-core-concepts.html">Policy core concepts</a>, <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy-enforcement-modes.html">enforcement modes</a>, and <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy-limitations-section.html">limitations</a></li>
+<li><strong>S18</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-sync-records.html">Registry synchronization</a> and <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-search-records.html">discovery consistency</a></li>
+<li><strong>S19</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/evaluations.html">Evaluations</a> and <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/ground-truth-evaluations.html">ground truth</a></li>
+<li><strong>S20</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-managed-kb.html">Managed Knowledge Bases Gateway connector and access filtering</a></li>
+<li><strong>S21</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/harness-versioning.html">Harness versioning</a> and <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/configuration-bundles.html">configuration bundles</a></li>
+<li><strong>S22</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy-guardrails-in-policies.html">Guardrails in policies</a> and <a href="https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html">Bedrock Guardrails</a></li>
+<li><strong>S23</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeHarness.html">InvokeHarness API</a></li>
+<li><strong>S24</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateHarness.html">CreateHarness API</a></li>
+<li><strong>S25</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-cross-account-sharing.html">Cross-account Registry sharing</a></li>
+<li><strong>S26</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/policy-session-based-temporal.html">Policy sessions and identity propagation</a></li>
+<li><strong>S27</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/vpc.html">VPC and PrivateLink</a>, <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-vpc-egress.html">Gateway VPC egress</a>, and <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/agentcore-regions.html">supported Regions</a></li>
+<li><strong>S28</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/registry-cross-region-inference.html">Registry cross-region inference</a></li>
+<li><strong>S29</strong> <a href="https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_HarnessSkillGitSource.html">Native Git skill source API</a></li>
+<li><strong>S30</strong> <a href="https://aws.amazon.com/bedrock/agentcore/pricing/">AgentCore pricing</a></li>
+<li><strong>G01</strong> <a href="https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f">Official AgentCore samples</a></li>
+<li><strong>G02</strong> <a href="https://github.com/aws/agentcore-cli/tree/be072a380434bbf1dae6ba23739eb2d1c0fb6220">AgentCore CLI</a></li>
+<li><strong>G03</strong> <a href="https://github.com/strands-agents/sdk-python/tree/563f57d7a387931760a2c3106014cd7c0db4c9bc">Strands Python SDK and harness</a></li>
+<li><strong>G04</strong> <a href="https://github.com/aws/agent-toolkit-for-aws/tree/acc890da1028c9c9e7c4d496238789d4d77f201d">AWS Agent Toolkit</a></li>
+<li><strong>G05</strong> <a href="https://github.com/aws/bedrock-agentcore-starter-toolkit/tree/c5e1e2eba27ba431fb4895603e38022c420214bd">Legacy Python starter toolkit notice</a></li>
+</ul></main></html>

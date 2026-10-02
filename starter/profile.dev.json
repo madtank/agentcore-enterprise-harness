@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "profileId": "internal_knowledge_ops",
+  "environment": "development",
+  "region": "us-east-1",
+  "harnessArn": "${HARNESS_ARN}",
+  "endpointName": "DEV",
+  "allowedTools": [
+    "@enterprise/managed-kb___Retrieve",
+    "@enterprise/operations___get_ticket",
+    "@enterprise/operations___prepare_ticket_update"
+  ],
+  "limits": {
+    "maxIterations": 12,
+    "timeoutSeconds": 120,
+    "maxTokens": 4096
+  },
+  "dataClassification": "development_non_sensitive",
+  "businessWritesEnabled": false
+}

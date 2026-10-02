@@ -1,0 +1,32 @@
+[
+  {
+    "repo": "awslabs/amazon-bedrock-agentcore-samples",
+    "url": "https://raw.githubusercontent.com/awslabs/amazon-bedrock-agentcore-samples/4cd43c71c642ce2428a39c6b025a73b686c74f8f/README.md",
+    "sha256": "233428b09881afdacd62de526e2bdb3af617d71f2925c35f424dc7853b6d7121",
+    "bytes": 11628
+  },
+  {
+    "repo": "aws/agentcore-cli",
+    "url": "https://raw.githubusercontent.com/aws/agentcore-cli/be072a380434bbf1dae6ba23739eb2d1c0fb6220/README.md",
+    "sha256": "b6dff13549448dbf1dfaaac13db748c3060e5b035905f4c8810eed1c529cdf90",
+    "bytes": 18034
+  },
+  {
+    "repo": "strands-agents/sdk-python",
+    "url": "https://raw.githubusercontent.com/strands-agents/sdk-python/563f57d7a387931760a2c3106014cd7c0db4c9bc/README.md",
+    "sha256": "8ca343868eed1983bd484a73200deeb296ed59b24c5809e01daa505bd74d3e09",
+    "bytes": 11353
+  },
+  {
+    "repo": "aws/agent-toolkit-for-aws",
+    "url": "https://raw.githubusercontent.com/aws/agent-toolkit-for-aws/acc890da1028c9c9e7c4d496238789d4d77f201d/README.md",
+    "sha256": "f300c6cade2aa379b300eab5345e9f16f8c2282527f0b70b19aa4ce5168cf036",
+    "bytes": 14739
+  },
+  {
+    "repo": "aws/bedrock-agentcore-starter-toolkit",
+    "url": "https://raw.githubusercontent.com/aws/bedrock-agentcore-starter-toolkit/c5e1e2eba27ba431fb4895603e38022c420214bd/README.md",
+    "sha256": "98b961e93e0b8434062a5434319e27ae44c291f9de1a56fc8ed7dd5b137bcb20",
+    "bytes": 12315
+  }
+]

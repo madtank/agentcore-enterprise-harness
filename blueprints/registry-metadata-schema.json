@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "owner": {"type": "string"},
+    "environment": {"type": "string", "enum": ["development", "staging", "production"]},
+    "dataClassification": {"type": "string", "enum": ["development_non_sensitive", "internal", "confidential", "restricted"]},
+    "sideEffects": {"type": "boolean"},
+    "artifactUri": {"type": "string", "format": "uri"},
+    "artifactDigest": {"type": "string"},
+    "evaluationEvidenceUri": {"type": "string", "format": "uri"},
+    "reviewedAt": {"type": "string"}
+  },
+  "required": ["owner", "environment", "dataClassification", "sideEffects", "artifactUri", "artifactDigest"]
+}

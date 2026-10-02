@@ -1,0 +1,4 @@
+[
+  {"beforeInvocation": {"name": "validate_invocation", "target": {"lambda": {"arn": "${REQUEST_VALIDATOR_LAMBDA_ARN}", "timeoutSeconds": 5, "failureMode": "deny"}}}},
+  {"beforeToolCall": {"name": "validate_tool_call", "target": {"lambda": {"arn": "${TOOL_VALIDATOR_LAMBDA_ARN}", "timeoutSeconds": 5, "failureMode": "deny"}}}}
+]

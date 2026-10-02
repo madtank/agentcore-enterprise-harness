@@ -1,0 +1,56 @@
+[
+  {
+    "file": "api-invoke-harness.html",
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeHarness.html",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeHarness.html",
+    "bytes": 40176,
+    "sha256": "1853c48f9d98a5683678176665f556c25fc170792c7a74a23bae544e9316eb17",
+    "retrieved_at": "2026-10-02T04:48:01.186452+00:00",
+    "extracted": true
+  },
+  {
+    "file": "api-create-harness.html",
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateHarness.html",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateHarness.html",
+    "bytes": 38283,
+    "sha256": "86aab4d7f549b09b640605d9102ee0f2e9e234ec142fbaf3ef53043e0a2116aa",
+    "retrieved_at": "2026-10-02T04:48:01.174671+00:00",
+    "extracted": true
+  },
+  {
+    "file": "api-harness-skill-git.html",
+    "url": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_HarnessSkillGitSource.html",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_HarnessSkillGitSource.html",
+    "bytes": 14733,
+    "sha256": "bcbe60da45317921b4aa03aa0d95b347ecfa98d569dfaba59c0484e006f4fcef",
+    "retrieved_at": "2026-10-02T04:48:01.154897+00:00",
+    "extracted": true
+  },
+  {
+    "file": "agentcore-pricing.html",
+    "url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+    "resolved_url": "https://aws.amazon.com/bedrock/agentcore/pricing/",
+    "bytes": 488050,
+    "sha256": "29b8e7da2cd688f868b1c9fa103bad1a3a4cd00267d10d6439a2647f3c12c041",
+    "retrieved_at": "2026-10-02T04:48:01.154749+00:00",
+    "extracted": false
+  },
+  {
+    "file": "bedrock-guardrails.html",
+    "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html",
+    "bytes": 19231,
+    "sha256": "77416a82d64121602b69ebe1f3e02e6569b2dab693f50691fdbf87239da97edc",
+    "retrieved_at": "2026-10-02T04:48:01.063032+00:00",
+    "extracted": true
+  },
+  {
+    "file": "bedrock-knowledge-bases.html",
+    "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html",
+    "resolved_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html",
+    "bytes": 18287,
+    "sha256": "1e03b0316b8000c8ee1d671fcf1e2622e11a5719c9bc73ca21763f058e844fdf",
+    "retrieved_at": "2026-10-02T04:48:01.181849+00:00",
+    "extracted": true
+  }
+]

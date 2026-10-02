@@ -1,0 +1,21 @@
+flowchart TB
+    U[Employee / developer] --> UI[Chat or internal application]
+    UI --> APP[Application backend\nidentity, sessions, request validation, output handling]
+    REG[AWS Agent Registry\napproved records] --> RES[Profile resolver / release pipeline]
+    ART[Git + immutable S3 skill artifacts] --> RES
+    RES --> CFG[Versioned agent profile + release lock]
+    CFG --> APP
+    APP --> H[Managed AgentCore harness\nisolated session, model/tool loop, limits, hooks]
+    H --> MODEL[Approved Bedrock model]
+    H --> MEM[AgentCore Memory\nactor-scoped conversation state]
+    H --> GW[AgentCore Gateway\nauthentication + ENFORCE policy]
+    GW --> KB[Knowledge retrieval\nsource access controls + citations]
+    GW --> OPS[Business tools\nread / prepare draft]
+    APP --> AP[Approval ledger + deterministic workflow]
+    AP --> WRITE[Controlled business write executor\nadd after MVP]
+    H -. optional later .-> SANDBOX[Browser / Code Interpreter]
+    APP --> OBS[Operational telemetry + separate audit records]
+    H --> OBS
+    GW --> OBS
+    OBS --> EVAL[Evaluations + release gates]
+    EVAL --> RES

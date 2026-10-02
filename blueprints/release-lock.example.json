@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "applicationContract": "Illustrative platform contract; not an AWS API payload",
+  "releaseId": "internal_knowledge_ops-dev-001",
+  "harness": {"arn": "${HARNESS_ARN}", "version": "1", "endpoint": "DEV"},
+  "model": {"provider": "bedrock", "modelId": "${APPROVED_MODEL_ID}"},
+  "skills": [
+    {"name": "knowledge-answering", "uri": "s3://${SKILL_BUCKET}/releases/dev-001/knowledge-answering/", "sha256": "${BUILD_ARTIFACT_DIGEST}", "registryRecordId": "${RECORD_ID}", "approvedRevision": "${REVISION}"}
+  ],
+  "gateway": {"arn": "${GATEWAY_ARN}", "schemaDigest": "${TOOL_SCHEMA_DIGEST}", "policyEvidenceUri": "s3://${EVIDENCE_BUCKET}/dev-001/policy-evidence.json", "mode": "ENFORCE"},
+  "evaluation": {"datasetVersion": "pilot-v1", "evidenceUri": "s3://${EVIDENCE_BUCKET}/dev-001/evaluations.json"},
+  "promotionStatus": "development_only"
+}

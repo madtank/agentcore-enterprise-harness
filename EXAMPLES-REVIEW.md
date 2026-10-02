@@ -1,0 +1,49 @@
+# GitHub examples review
+
+Reviewed 2 October 2026. Selected official sample source is pinned to `4cd43c71c642ce2428a39c6b025a73b686c74f8f`. The downloaded research snapshot contains 304 files, including shared harness and policy helpers and upstream LICENSE/NOTICE. Images, generated PDFs and notebooks are omitted. Relative image links in the original READMEs will therefore not render offline.
+
+**Decision:** use the current managed harness and current AgentCore CLI. Reuse small integration and evaluation patterns rather than adopt a full sample application. Keep runtime discovery, dynamic skill installation, multi-agent orchestration and external notification wiring out of the first MVP.
+
+Review consisted of READMEs, API/schema scans and the specific code paths listed below. These samples were not imported, executed, deployed or cleaned up. This is a suitability review, not a complete security or integration audit.
+
+| Decision | Example | Useful adaptation / issue | Review scope |
+| --- | --- | --- | --- |
+| Start here | [00-getting-started](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/01-harness/00-getting-started/) | Managed lifecycle and client/session pattern; narrow helper IAM and remove default execution tools. | README + main Python + shared client/IAM helpers |
+| Adapt | [03-execution-limits](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/01-harness/01-advanced-examples/03-execution-limits/) | Put iteration/time/output limits in the profile; verify live token semantics. | README + limits Python |
+| Adapt | [02-gateway-integration](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/01-harness/01-advanced-examples/02-gateway-integration/) | Gateway tool integration shape; replace NONE inbound auth and public Exa demo. | README + Gateway creation/invoke paths |
+| Reference | [05-agent-skills](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/01-harness/01-advanced-examples/05-agent-skills/) | Dependency/artifact pattern; replace session-time npx installation with reviewed immutable artifacts. | README + skill invocation/install paths |
+| Later | [07-oauth](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/01-harness/01-advanced-examples/07-oauth/) | Add when real tools require user-specific credentials; review demo Cognito/token flow. | README + selected auth/helper code |
+| Adapt | [01-registry-end-to-end](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/01-registry-end-to-end/) | Current code uses new service clients and descriptors; avoid older README schema terminology and demo IAM user/access-key creation. | README + service clients, record payloads and governance checks |
+| Later | [admin-approval-workflow](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/admin-approval-workflow/) | EventBridge/curation structure; no Slack integration configured or called in this setup. | README + main workflow/API configuration |
+| Reference only | [registry-skills-dynamic-discovery](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/registry-skills-dynamic-discovery/) | Demonstrates SKILL records; loader installs discovered packages and executes shell/Python on local host. Replace with reviewed artifacts in isolated execution. | README + record payloads + complete downloader/execution helpers |
+| Later | [discovery-and-invocation-at-runtime](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/03-advanced/discovery-and-invocation-at-runtime/) | Specialist discovery concept; resolve only within a preapproved profile envelope. | README + selected discovery/client paths |
+| Reference | [managed-kb](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/01-gateway/01-attach-targets/mcp/connectors/managed-kb/) | Very short sample index; use the downloaded detailed developer guide for actual setup and userContext behavior. | Complete short README |
+| Adapt | [01-tool-access-with-policy](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/01-tool-access-with-policy/) | Policy deployment and validation patterns; use your own generated tool schema. | README + selected service/policy call paths |
+| Adapt | [02-guardrails-in-policy](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/02-policy/02-guardrails-in-policy/) | Gateway content checks; evaluate thresholds and coverage; cannot reverse executed side effects. | README + selected guardrail API/configuration paths |
+| Borrow gate pattern | [cicd-gated-evaluation](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/06-observe-evaluate-optimize-your-agent/02-evaluate/cicd-gated-evaluation/) | Useful auth/evaluation pipeline; larger custom Runtime/CDK stack than the managed MVP. | Detailed README + selected source/configuration paths |
+| Custom-code fallback | [knowledge-base-rag-agent](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/) | Infrastructure/retrieval reference if leaving the managed harness; not the initial base stack. | README + high-level structure; not a full implementation/security audit |
+| Existing preview users only | [04-migrate-to-new-namespace](https://github.com/awslabs/amazon-bedrock-agentcore-samples/tree/4cd43c71c642ce2428a39c6b025a73b686c74f8f/01-features/07-centralize-and-govern-your-ai-infrastructure/03-registry/04-migrate-to-new-namespace/) | Migration tooling for existing data; new MVP starts directly on agent-registry. | README + namespace/API patterns |
+
+## Other repositories
+
+| Repository | Snapshot | Finding |
+| --- | --- | --- |
+| [aws/agentcore-cli](https://github.com/aws/agentcore-cli/tree/be072a380434bbf1dae6ba23739eb2d1c0fb6220) | `be072a380434` | Current recommended Node CLI; managed harness support and export. Prefer a project-pinned installation. |
+| [strands-agents/sdk-python](https://github.com/strands-agents/sdk-python/tree/563f57d7a387931760a2c3106014cd7c0db4c9bc) | `563f57d7a387` | Custom agent/harness code escape path; not required for the first managed client. |
+| [aws/agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws/tree/acc890da1028c9c9e7c4d496238789d4d77f201d) | `acc890da1028` | AWS-oriented skills and MCP integrations; selectively review if adding AWS-building capabilities. |
+| [aws/bedrock-agentcore-starter-toolkit](https://github.com/aws/bedrock-agentcore-starter-toolkit/tree/c5e1e2eba27ba431fb4895603e38022c420214bd) | `c5e1e2eba27b` | Explicitly legacy for new projects; command-name collision with the current CLI is documented. |
+
+Only README/repository metadata and file-tree structure were reviewed for these four supporting repositories. Their full source was not downloaded.
+
+## Specific compatibility findings
+
+- The Registry end-to-end Python code uses `agent-registry-control`, `agent-registry`, `recordType`, and `approvalConfiguration.autoApprovalRules`. Its README still describes A2A as a record type and `autoApproval: false`. The current semantic agent type is `AGENT`; descriptors carry the protocol.
+- The Gateway integration example explicitly creates `authorizerType="NONE"`. It is a plumbing demonstration. Use `AWS_IAM` for the proposed dev service identity or `CUSTOM_JWT` for the relevant user flow.
+- The harness getting-started and other examples use shell/command operations and shared role helpers. Resource scopes and permitted operations need review before reuse.
+- The dynamic skill loader fetches a Git branch, installs discovered pip/npm packages, and exposes shell/Python subprocess tools. The subprocess is on the local host, not automatically isolated by AgentCore.
+- Some samples perform AWS calls at module import and create/delete IAM users, roles and resources. Review the source and cleanup behavior before running even a help command.
+- The sample harness README pins CLI `0.30.0`. The starter in this package instead uses boto3 `1.43.107`; local service-model validation confirmed the harness and new Registry APIs exist. No live request was made.
+
+## What is included
+
+`starter/` is newly authored, development-only request-boundary code and is the default local setup. `sources/github/` records pinned commits, source hashes and the selected-file inventory. Run `python scripts/download_examples.py` to retrieve the 304 reviewed reference files into the git-ignored `examples/upstream/` directory, preserving original LICENSE/NOTICE files. Upstream deployment, cleanup and notification scripts are never automatically executed. The full downloaded research archive contains the original reference snapshot; this public repository keeps the review and retrieval instructions.

@@ -1,0 +1,17 @@
+{
+  "name": "DevAgentRegistry",
+  "description": "Reviewed resources for the internal knowledge and business operations development MVP",
+  "discoveryConfiguration": {
+    "authorizerType": "AWS_IAM"
+  },
+  "approvalConfiguration": {
+    "autoApprovalRules": []
+  },
+  "customMetadataSchemaConfiguration": {
+    "defaultSchema": "{\n  \"type\": \"object\",\n  \"properties\": {\n    \"owner\": {\"type\": \"string\"},\n    \"environment\": {\"type\": \"string\", \"enum\": [\"development\", \"staging\", \"production\"]},\n    \"dataClassification\": {\"type\": \"string\", \"enum\": [\"development_non_sensitive\", \"internal\", \"confidential\", \"restricted\"]},\n    \"sideEffects\": {\"type\": \"boolean\"},\n    \"artifactUri\": {\"type\": \"string\", \"format\": \"uri\"},\n    \"artifactDigest\": {\"type\": \"string\"},\n    \"evaluationEvidenceUri\": {\"type\": \"string\", \"format\": \"uri\"},\n    \"reviewedAt\": {\"type\": \"string\"}\n  },\n  \"required\": [\"owner\", \"environment\", \"dataClassification\", \"sideEffects\", \"artifactUri\", \"artifactDigest\"]\n}\n"
+  },
+  "tags": {
+    "environment": "development",
+    "owner": "agent-platform"
+  }
+}

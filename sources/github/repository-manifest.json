@@ -1,0 +1,57 @@
+[
+  {
+    "repo": "awslabs/amazon-bedrock-agentcore-samples",
+    "description": "Amazon Bedrock Agentcore accelerates AI agents into production with the scale, reliability, and security, critical to real-world deployment.",
+    "branch": "main",
+    "sha": "4cd43c71c642ce2428a39c6b025a73b686c74f8f",
+    "archived": false,
+    "updated_at": "2026-10-02T04:13:31Z",
+    "pushed_at": "2026-10-02T03:16:38Z",
+    "files": 10651,
+    "truncated": false
+  },
+  {
+    "repo": "aws/agentcore-cli",
+    "description": "The terminal experience for AgentCore!",
+    "branch": "main",
+    "sha": "be072a380434bbf1dae6ba23739eb2d1c0fb6220",
+    "archived": false,
+    "updated_at": "2026-10-01T20:47:28Z",
+    "pushed_at": "2026-10-01T21:51:45Z",
+    "files": 2118,
+    "truncated": false
+  },
+  {
+    "repo": "strands-agents/sdk-python",
+    "description": "Build an agent harness and control it end-to-end. Open-source SDK for production AI agents in Python & TypeScript - any model, any cloud.",
+    "branch": "main",
+    "sha": "563f57d7a387931760a2c3106014cd7c0db4c9bc",
+    "archived": false,
+    "updated_at": "2026-10-02T04:57:39Z",
+    "pushed_at": "2026-10-01T21:00:14Z",
+    "files": 3696,
+    "truncated": false
+  },
+  {
+    "repo": "aws/agent-toolkit-for-aws",
+    "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build on AWS",
+    "branch": "main",
+    "sha": "acc890da1028c9c9e7c4d496238789d4d77f201d",
+    "archived": false,
+    "updated_at": "2026-10-02T04:48:45Z",
+    "pushed_at": "2026-10-02T04:48:42Z",
+    "files": 3878,
+    "truncated": false
+  },
+  {
+    "repo": "aws/bedrock-agentcore-starter-toolkit",
+    "description": "Python CLI toolkit for Amazon Bedrock AgentCore (legacy). For new projects, use the AgentCore CLI: https://github.com/aws/agentcore-cli",
+    "branch": "main",
+    "sha": "c5e1e2eba27ba431fb4895603e38022c420214bd",
+    "archived": false,
+    "updated_at": "2026-09-30T00:48:56Z",
+    "pushed_at": "2026-10-01T20:22:20Z",
+    "files": 698,
+    "truncated": false
+  }
+]

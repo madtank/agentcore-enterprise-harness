@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+starter/.state/
+*.sqlite3
+.env
+.env.*
+!.env.example
+sources/html/
+sources/text/
+sources/agentcore-developer-guide.pdf
+sources/agentcore-overview.html
+examples/upstream/
